@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="http://www.viviano.ca/tag/publications/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://www.viviano.ca/" rel="alternate" type="text/html" />
-  <updated>2021-02-07T04:02:02+00:00</updated>
-  <id>http://www.viviano.ca/tag/publications/feed.xml</id>
+  <link href="//tag/publications/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="//" rel="alternate" type="text/html" />
+  <updated>2021-02-07T04:04:33+00:00</updated>
+  <id>//tag/publications/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Redefining Psychiatric Treatment Using Machine Learning</title>
-      <link href="http://www.viviano.ca/biomarkers" rel="alternate" type="text/html" title="Redefining Psychiatric Treatment Using Machine Learning" />
+      <link href="//biomarkers" rel="alternate" type="text/html" title="Redefining Psychiatric Treatment Using Machine Learning" />
       <published>2018-09-14T10:32:20+00:00</published>
       <updated>2018-09-14T10:32:20+00:00</updated>
-      <id>http://www.viviano.ca/biomarkers</id>
-      <content type="html" xml:base="http://www.viviano.ca/biomarkers">&lt;p&gt;ML can be used to find neurologically-distinct subtypes of schizophrena.&lt;/p&gt;
+      <id>//biomarkers</id>
+      <content type="html" xml:base="//biomarkers">&lt;p&gt;ML can be used to find neurologically-distinct subtypes of schizophrena.&lt;/p&gt;
 
 &lt;p&gt;Simultaneously with the project on predicting disease trajectory for those at risk of developing Alzheimer’s disease, I was helping the lab manage the &lt;a href=&quot;https://academic.oup.com/schizophreniabulletin/article/45/Supplement_2/S144/5434549&quot;&gt;Social Processes Initiative in Neurobiology of the Schizophrenia’s (SPINS)&lt;/a&gt; study. During my 4 years at the &lt;a href=&quot;https://www.camh.ca/en/science-and-research/institutes-and-centres/campbell-family-mental-health-research-institute/research-focus-campbell-institute/kimel-family-translational-imaging-genetics-lab&quot;&gt;Centre for Addiction and Mental Health&lt;/a&gt;, I spent a lot of my time managing the MRI and clinical data collected by the the three hospitals involved in the study. Briefly, the study was designed to explore the neurological underpinnings of social processing deficits seen in some subtypes of schizophrenia. Schizophrenia is an interesting disease: there are many subtypes, and each of them have very different symptoms and treatments. The optimal treatment varies a lot between individuals. These patterns are largely true for all psychiatric disorders, which led to the &lt;a href=&quot;https://www.nimh.nih.gov/research/research-funded-by-nimh/rdoc/about-rdoc.shtml&quot;&gt;Research Domain Criterion (RDoC)&lt;/a&gt; framework for mapping genomics and neurological information like brain circuits to behavioural measures. The underlying goal of the research direction is to understand the brain-behaviour relationships across diseases, to potentially identify neurologically-distinct subtypes of each disease that might be more indicative of the appropriate treatment than the diagnostic label. In my final year with the team, I ran a preliminary study using the data to evaluate the relationships between the fMRI data collected during the study and the behavioural scores. We focused on social processing because these behavioural scores are strong predictors of “functional outcomes”: how well a schizophrenia patient will recover with treatment. Unfortunately, outcomes are highly variable.&lt;/p&gt;
 
@@ -71,11 +71,11 @@
   
     <entry>
       <title type="html">Deep Learning to Detect Early Cognitive Decline</title>
-      <link href="http://www.viviano.ca/trajectories" rel="alternate" type="text/html" title="Deep Learning to Detect Early Cognitive Decline" />
+      <link href="//trajectories" rel="alternate" type="text/html" title="Deep Learning to Detect Early Cognitive Decline" />
       <published>2018-01-11T10:32:20+00:00</published>
       <updated>2018-01-11T10:32:20+00:00</updated>
-      <id>http://www.viviano.ca/trajectories</id>
-      <content type="html" xml:base="http://www.viviano.ca/trajectories">&lt;p&gt;Using Siamese Networks, we were able to use a cocktail of MRI scans and gene sequences to predict people who were in most need of future clinical care.&lt;/p&gt;
+      <id>//trajectories</id>
+      <content type="html" xml:base="//trajectories">&lt;p&gt;Using Siamese Networks, we were able to use a cocktail of MRI scans and gene sequences to predict people who were in most need of future clinical care.&lt;/p&gt;
 
 &lt;p&gt;While working at the &lt;a href=&quot;https://www.camh.ca/&quot;&gt;Centre for Addiction and Mental Health&lt;/a&gt;, I had the pleasure of working with &lt;a href=&quot;https://scholar.google.com/citations?user=SoMyf3YAAAAJ&amp;amp;hl=en&amp;amp;oi=ao&quot;&gt;Jon Pipitone&lt;/a&gt;, a computer scientist and climate activist trained at the University of Toronto, and &lt;a href=&quot;https://dblp.org/pid/67/8968.html&quot;&gt;Nikhil Bhagwat&lt;/a&gt;, a defense contractor-turned-biomedical researcher, during my day job keeping the lights on at the &lt;a href=&quot;http://imaging-genetics.camh.ca/&quot;&gt;Kimel-Family Translational Imaging-Genetics Lab (TIGRLAB)&lt;/a&gt;, headed by the now-VP of CAMH research, &lt;a href=&quot;https://www.camh.ca/en/science-and-research/science-and-research-staff-directory/aristotlevoineskos&quot;&gt;Dr. Aristotle Voineskos&lt;/a&gt;. In the field, there was a growing consensus that machine learning was a key to improving psychatric diagnosis and treatment, due to the high variability of outcomes given similar diagnosis using traditional tools like the Diagnostics and Statistical Manual of Mental Disorders (&lt;a href=&quot;https://www.psychiatry.org/psychiatrists/practice/dsm&quot;&gt;DSM&lt;/a&gt;).&lt;/p&gt;
 
@@ -125,11 +125,11 @@
   
     <entry>
       <title type="html">Brain Networks Becomes More Disorganized with Age</title>
-      <link href="http://www.viviano.ca/aging" rel="alternate" type="text/html" title="Brain Networks Becomes More Disorganized with Age" />
+      <link href="//aging" rel="alternate" type="text/html" title="Brain Networks Becomes More Disorganized with Age" />
       <published>2016-01-09T10:32:20+00:00</published>
       <updated>2016-01-09T10:32:20+00:00</updated>
-      <id>http://www.viviano.ca/aging</id>
-      <content type="html" xml:base="http://www.viviano.ca/aging">&lt;p&gt;For decades, functional MRI (fMRI) researchers primarily looked for “task evoked” activity in the brain by looking for small deviations of the BOLD signal against what appeared to be a massive wall of background “noise”. The signal to noise ratio (SNR) of the task-evoked BOLD signal is small: only a &lt;a href=&quot;https://onlinelibrary.wiley.com/doi/full/10.1002/1522-2594%28200012%2944%3A6%3C925%3A%3AAID-MRM14%3E3.0.CO%3B2-M&quot;&gt;few percentage points at 1.5 T&lt;/a&gt;, which is a major contributor to the &lt;a href=&quot;https://www.nature.com/articles/s42003-018-0073-z&quot;&gt;reproducibility crisis in fMRI studies&lt;/a&gt;.&lt;/p&gt;
+      <id>//aging</id>
+      <content type="html" xml:base="//aging">&lt;p&gt;For decades, functional MRI (fMRI) researchers primarily looked for “task evoked” activity in the brain by looking for small deviations of the BOLD signal against what appeared to be a massive wall of background “noise”. The signal to noise ratio (SNR) of the task-evoked BOLD signal is small: only a &lt;a href=&quot;https://onlinelibrary.wiley.com/doi/full/10.1002/1522-2594%28200012%2944%3A6%3C925%3A%3AAID-MRM14%3E3.0.CO%3B2-M&quot;&gt;few percentage points at 1.5 T&lt;/a&gt;, which is a major contributor to the &lt;a href=&quot;https://www.nature.com/articles/s42003-018-0073-z&quot;&gt;reproducibility crisis in fMRI studies&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;In 1995, researchers discovered that areas of the brain’s primary motor cortex seemed to have highly correlated BOLD signals with other regions known to be involved with motor output &lt;em&gt;even when the person in the scanner was doing nothing in particular&lt;/em&gt;: they called this correlation analysis “&lt;a href=&quot;https://onlinelibrary.wiley.com/doi/abs/10.1002/mrm.1910340409&quot;&gt;functional connectivity&lt;/a&gt;”. At first, this “resting state” signal was met with a lot of skepticism in the community because, for many, a neurological phenomenon without a corresponding behavioral one is uninteresting noise. The research over the next two decades would find irrefutable evidence that &lt;a href=&quot;https://www.pnas.org/content/103/37/13848.short&quot;&gt;the resting state signal is highly reproducible&lt;/a&gt; and that &lt;a href=&quot;https://www.pnas.org/content/106/31/13040.short&quot;&gt;they form networks that have a tight correspondence with the regions identified in the task-based fMRI literature&lt;/a&gt; … without the issues related to reproducibility. To me, this was extremely exciting: the fMRI signal is both &lt;em&gt;psychologically relevant&lt;/em&gt; and &lt;em&gt;reproducible&lt;/em&gt; making it a signal from which to derive a meaningful &lt;em&gt;psychiatric biomarker&lt;/em&gt;.&lt;/p&gt;
 
@@ -177,11 +177,11 @@
   
     <entry>
       <title type="html">How I Took a MRI of a Very Small Part of my own Brain</title>
-      <link href="http://www.viviano.ca/trn" rel="alternate" type="text/html" title="How I Took a MRI of a Very Small Part of my own Brain" />
+      <link href="//trn" rel="alternate" type="text/html" title="How I Took a MRI of a Very Small Part of my own Brain" />
       <published>2015-02-04T10:32:20+00:00</published>
       <updated>2015-02-04T10:32:20+00:00</updated>
-      <id>http://www.viviano.ca/trn</id>
-      <content type="html" xml:base="http://www.viviano.ca/trn">&lt;p&gt;I was the first person ever to record a fMRI signal from the thalamic reticular nucleus.&lt;/p&gt;
+      <id>//trn</id>
+      <content type="html" xml:base="//trn">&lt;p&gt;I was the first person ever to record a fMRI signal from the thalamic reticular nucleus.&lt;/p&gt;
 
 &lt;p&gt;The TRN is small inhibitory structure in the brain that is implicated in &lt;a href=&quot;https://www.quantamagazine.org/to-pay-attention-the-brain-uses-filters-not-a-spotlight-20190924/&quot;&gt;attentional filtering&lt;/a&gt;. My boss at the time was the Director of &lt;a href=&quot;https://mri.info.yorku.ca/&quot;&gt;York University’s MRI centre&lt;/a&gt;, &lt;a href=&quot;https://www.psych.udel.edu/people/full-list-searchable/kschneider?uid=kschneider&amp;amp;Name=Keith%20Schneider&quot;&gt;Keith Schneider&lt;/a&gt; (and has since moved on to do the same and the University of Delaware), was mostly interested in how the &lt;a href=&quot;https://www.jneurosci.org/content/31/23/8643.short&quot;&gt;subcortical regions of the brain contribute to attention&lt;/a&gt;: our proclivity to devote a lot of computational resources to only a few aspects of the data our brain could potentially access. Francis Crick (yeah, the DNA guy) was &lt;a href=&quot;https://www.newscientist.com/article/dn14869-crick-was-right-about-vision-filter-in-the-brain/&quot;&gt;the first person suggest that the thalamus would implement these filters&lt;/a&gt; to perform attentional filtering, and this was &lt;a href=&quot;https://www.nature.com/articles/nature07382&quot;&gt;confirmed many years later&lt;/a&gt; in experiments.&lt;/p&gt;
 
