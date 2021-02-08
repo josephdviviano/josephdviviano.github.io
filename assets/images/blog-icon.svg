@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!--
-   width="738.12573"
-   height="71.750061"
--->
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -11,9 +7,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="100%"
-   height="auto"
-   viewBox="0 0 195.29576 18.983871"
+   width="829.14062"
+   height="79.46875"
+   viewBox="0 0 219.37678 21.026108"
    version="1.1"
    id="svg8"
    inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
@@ -28,8 +24,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="279.27342"
-     inkscape:cy="388.5711"
+     inkscape:cx="279.16925"
+     inkscape:cy="396.16479"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -48,11 +44,11 @@
      fit-margin-right="5"
      fit-margin-left="5">
     <sodipodi:guide
-       position="185.78159,9.5250061"
+       position="185.75403,9.5580798"
        orientation="0,-1"
        id="guide14" />
     <sodipodi:guide
-       position="98.847069,-27.894636"
+       position="98.819509,-27.861562"
        orientation="1,0"
        id="guide16" />
   </sodipodi:namedview>
@@ -72,10 +68,10 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-11.521981,-10.95185)">
+     transform="translate(-11.549542,-8.9426872)">
     <text
        xml:space="preserve"
-       style="font-size:22.5778px;line-height:1.25;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';letter-spacing:0px;stroke-width:0.264583;overflow:visible"
+       style="font-size:25.4px;line-height:1.25;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';letter-spacing:0px;stroke-width:0.264583"
        x="12.624412"
        y="28.348221"
        id="text12"><tspan
@@ -83,6 +79,6 @@
          id="tspan10"
          x="12.624412"
          y="28.348221"
-         style="fill:#ffffff;stroke-width:0.264583">JOSEPH D VIVIANO</tspan></text>
+         style="font-size:25.4px;fill:#ffffff;stroke-width:0.264583">JOSEPH D VIVIANO</tspan></text>
   </g>
 </svg>
