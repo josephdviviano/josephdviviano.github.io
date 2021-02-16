@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="//author/josephdviviano/feed.xml" rel="self" type="application/atom+xml" />
   <link href="//" rel="alternate" type="text/html" />
-  <updated>2021-02-16T03:19:58+00:00</updated>
+  <updated>2021-02-16T03:21:45+00:00</updated>
   <id>//author/josephdviviano/feed.xml</id>
 
   
@@ -37,7 +37,7 @@
       <published>2018-09-14T10:32:20+00:00</published>
       <updated>2018-09-14T10:32:20+00:00</updated>
       <id>//biomarkers</id>
-      <content type="html" xml:base="//biomarkers">&lt;p&gt;ML can be used to find neurologically-distinct subtypes of Schizophrenia.&lt;/p&gt;
+      <content type="html" xml:base="//biomarkers">&lt;p&gt;Machine learning can be used to find neurologically-distinct subtypes of Schizophrenia.&lt;/p&gt;
 
 &lt;p&gt;A major issue with psychiatry is that individuals with the same diagnostic label from the &lt;a href=&quot;https://www.psychiatry.org/psychiatrists/practice/dsm&quot;&gt;Diagnostic and Statistical Manual of Mental Disorders (DSM)&lt;/a&gt; can actually have very different symptoms or deficits: it is common to count symptoms, and then give a diagnosis if the patient reaches passes a “symptom threshold” (this is an oversimplification, but suffices for illustration). You can imagine that using this scheme, two individuals with the exact same diagnosis might have very few overlapping, or in extreme cases, no overlapping symptoms. This is particularly true with one of the most heterogeneous disorders: Schizophrenia.&lt;/p&gt;
 
@@ -80,7 +80,7 @@
       
 
       
-        <summary type="html">ML can be used to find neurologically-distinct subtypes of Schizophrenia.</summary>
+        <summary type="html">Machine learning can be used to find neurologically-distinct subtypes of Schizophrenia.</summary>
       
 
       
