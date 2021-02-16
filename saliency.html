@@ -11,7 +11,7 @@
 
 
 
-    <title>Joseph D Viviano</title>
+    <title>Current Practices for Diagnosing Generalization Failure in Applications Might be Misguided</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -38,28 +38,36 @@
 
 <meta name="description" content="AI Scientist & Engineer" />
     <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="/" />
+    <link rel="canonical" href="/saliency" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="Joseph D Viviano" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Joseph D Viviano" />
-    <meta property="og:description" content="AI Scientist & Engineer" />
-    <meta property="og:url" content="/" />
-    <meta property="og:image" content="/assets/images/blog-cover-desat.jpg" />
+    <meta property="og:title" content="Current Practices for Diagnosing Generalization Failure in Applications Might be Misguided" />
+    <meta property="og:description" content="I’m ecstatic that my first publication in a “real” machine learning venue was the International Conference on Learning Representations (ICLR). I’ll summarize the paper soon.
+" />
+    <meta property="og:url" content="/saliency" />
+    <meta property="og:image" content="//assets/images/saliency/saliency-cover.png" />
     <meta property="article:publisher" content="https://www.facebook.com/josephdviviano" />
+    <meta property="article:author" content="https://www.facebook.com/josephdviviano" />
+    <meta property="article:published_time" content="2021-01-24T10:32:20+00:00" />
+    <meta property="article:modified_time" content="2021-01-24T10:32:20+00:00" />
+    <meta property="article:tag" content="Publications" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Joseph D Viviano" />
-    <meta name="twitter:description" content="AI Scientist & Engineer" />
+    <meta name="twitter:title" content="Current Practices for Diagnosing Generalization Failure in Applications Might be Misguided" />
+    <meta name="twitter:description" content="I’m ecstatic that my first publication in a “real” machine learning venue was the International Conference on Learning Representations (ICLR). I’ll summarize the paper soon.
+" />
     <meta name="twitter:url" content="/" />
-    <meta name="twitter:image" content="/assets/images/blog-cover-desat.jpg" />
+    <meta name="twitter:image" content="//assets/images/saliency/saliency-cover.png" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="Joseph D Viviano" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Publications" />
     <meta name="twitter:site" content="@josephdviviano" />
     <meta name="twitter:creator" content="@josephdviviano" />
-    <meta property="og:image:width" content="2000" />
-    <meta property="og:image:height" content="666" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="933" />
 
     <script type="application/ld+json">
 {
@@ -70,18 +78,19 @@
         "name": "Joseph D Viviano",
         "logo": "/assets/images/blog-icon.png"
     },
-    "url": "/",
+    "url": "/saliency",
     "image": {
         "@type": "ImageObject",
-        "url": "/assets/images/blog-cover-desat.jpg",
+        "url": "//assets/images/saliency/saliency-cover.png",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "/"
+        "@id": "/saliency"
     },
-    "description": "AI Scientist & Engineer"
+    "description": "I’m ecstatic that my first publication in a “real” machine learning venue was the International Conference on Learning Representations (ICLR). I’ll summarize the paper soon.
+"
 }
     </script>
 
@@ -94,31 +103,27 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="Joseph D Viviano" href="feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Current Practices for Diagnosing Generalization Failure in Applications Might be Misguided" href="feed.xml" />
 
 
 </head>
-<body class="home-template">
+<body class="post-template">
 
     <div class="site-wrapper">
         <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
-        <!-- < default -->
+        <!-- default -->
+
 <!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template -->
 
-<!-- The big featured header, it uses blog cover image as a BG if available -->
-<header class="site-header outer " style="background-image:  url(assets/images/blog-cover-desat.jpg) ">
+<header class="site-header outer">
     <div class="inner">
-        <div class="site-header-content">
-            <h1 class="site-title">
-                
-                    <img class="site-logo" src="assets/images/blog-icon.png" alt="Joseph D Viviano"/>
-                
-            </h1>
-            <h2 class="site-description">AI Scientist & Engineer</h2>
-        </div>
         <nav class="site-nav">
     <div class="site-nav-left">
+        
+            
+                <a class="site-nav-logo" href="/"><img src="assets/images/blog-icon.png" alt="Joseph D Viviano" /></a>
+            
         
         
             <ul class="nav" role="menu">
@@ -269,23 +274,170 @@ into the {body} of the default.hbs template -->
     </div>
 </header>
 
-<!-- The main content area -->
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-        <div class="post-feed">
-            <!-- The tag below includes the markup for each post - partials/post-card.hbs -->
+        <article class="post-full  tag-publications post ">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime="24 January 2021">24 January 2021</time>
+                    
+                        <span class="date-divider">/</span>
+                        
+                            
+                               <a href='tag/publications/'>PUBLICATIONS</a>
+                            
+                        
+                    
+                </section>
+                <h1 class="post-full-title">Current Practices for Diagnosing Generalization Failure in Applications Might be Misguided</h1>
+            </header>
+
+            
+            <figure class="post-full-image" style="background-image: url(/assets/images/saliency/saliency-cover.png)">
+            </figure>
             
 
+            <section class="post-full-content">
+                <div class="kg-card-markdown">
+                    <p>I’m ecstatic that my first publication in a “real” machine learning venue was the <a href="https://iclr.cc/">International Conference on Learning Representations (ICLR)</a>. I’ll summarize the <a href="https://openreview.net/forum?id=c9-WeM-ceB">paper</a> soon.</p>
 
-    <article class="post-card home-template">
+                </div>
+            </section>
+
+            <!-- Email subscribe form at the bottom of the page -->
+            
+
+            <footer class="post-full-footer">
+                <!-- Everything inside the #author tags pulls data from the author -->
+                <!-- #author-->
+                
+                    
+                        <section class="author-card">
+                            
+                                <img class="author-profile-image" src="/assets/images/joseph-viviano-128.jpg" alt="josephdviviano" />
+                            
+                            <section class="author-card-content">
+                                <h4 class="author-card-name"><a href="author/josephdviviano">Joseph D Viviano</a></h4>
+                                
+                                    <p>Click clack.</p>
+                                
+                            </section>
+                        </section>
+                        <div class="post-full-footer-right">
+                            <a class="author-card-button" href="author/josephdviviano">Read More</a>
+                        </div>
+                    
+                
+                <!-- /author  -->
+            </footer>
+
+            <!-- If you use Disqus comments, just uncomment this block.
+            The only thing you need to change is "test-apkdzgmqhj" - which
+            should be replaced with your own Disqus site-id. -->
+            
+
+        </article>
+
+    </div>
+</main>
+
+<!-- Links to Previous/Next posts -->
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            
+                
+                
+                
+                
+                    <article class="read-next-card"
+                        
+                            style="background-image: url(assets/images/blog-cover-desat.jpg)"
+                        
+                    >
+                        <header class="read-next-card-header">
+                            <small class="read-next-card-header-sitetitle">&mdash; Joseph D Viviano &mdash;</small>
+                            
+                                <h3 class="read-next-card-header-title"><a href="tag/publications/">Publications</a></h3>
+                            
+                        </header>
+                        <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+</div>
+                        <div class="read-next-card-content">
+                            <ul>
+                                
+                                
+                                  
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="biomarkers">Redefining Psychiatric Treatment Using Machine Learning</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="trajectories">Deep Learning to Detect Early Cognitive Decline</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="aging">Brain Networks Becomes More Disorganized with Age</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                            </ul>
+                        </div>
+                        <footer class="read-next-card-footer">
+                            <a href="tag/publications/">
+                                
+                                    See all 4 posts  →
+                                
+                            </a>
+                        </footer>
+                    </article>
+                
+            
+
+            <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="saliency">
-                <div class="post-card-image" style="background-image: url(/assets/images/saliency/saliency-cover.png)"></div>
+            <a class="post-card-image-link" href="biomarkers">
+                <div class="post-card-image" style="background-image: url(/assets/images/biotype/biotypes-title.png)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="saliency">
+            <a class="post-card-content-link" href="biomarkers">
                 <header class="post-card-header">
                     
                         
@@ -295,12 +447,11 @@ into the {body} of the default.hbs template -->
                         
                     
 
-                    <h2 class="post-card-title">Current Practices for Diagnosing Generalization Failure in Applications Might be Misguided</h2>
+                    <h2 class="post-card-title">Redefining Psychiatric Treatment Using Machine Learning</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
-                        <p>I’m ecstatic that my first publication in a “real” machine learning venue was the International Conference on Learning Representations (ICLR). I’ll summarize the paper soon.
-</p>
+                        <p></p>
                     
                 </section>
             </a>
@@ -325,203 +476,51 @@ into the {body} of the default.hbs template -->
         </div>
     </article>
 
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="biomarkers">
-                <div class="post-card-image" style="background-image: url(/assets/images/biotype/biotypes-title.png)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="biomarkers">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Publications</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">Redefining Psychiatric Treatment Using Machine Learning</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>Machine learning can be used to find neurologically-distinct subtypes of Schizophrenia.
-
-</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/joseph-viviano-128.jpg" alt="Joseph D Viviano" />
-                        
-                        <span class="post-card-author">
-                            <a href="author/josephdviviano/">Joseph D Viviano</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      4 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="trajectories">
-                <div class="post-card-image" style="background-image: url(assets/images/trajectories/alz-cover.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="trajectories">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Publications</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">Deep Learning to Detect Early Cognitive Decline</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>Using Siamese Networks, we were able to use a cocktail of MRI scans and gene sequences to predict people who were in most need of future clinical care.
-
-</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/joseph-viviano-128.jpg" alt="Joseph D Viviano" />
-                        
-                        <span class="post-card-author">
-                            <a href="author/josephdviviano/">Joseph D Viviano</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      3 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="aging">
-                <div class="post-card-image" style="background-image: url(assets/images/rest/rest-cover.png)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="aging">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Publications</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">Brain Networks Becomes More Disorganized with Age</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>Sometimes, it’s easier to understand how a complex system works by zooming out and thinking less about the details.
-
-</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/joseph-viviano-128.jpg" alt="Joseph D Viviano" />
-                        
-                        <span class="post-card-author">
-                            <a href="author/josephdviviano/">Joseph D Viviano</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      2 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="trn">
-                <div class="post-card-image" style="background-image: url(assets/images/msc/msc-cover.png)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="trn">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Publications</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">How I Took a MRI of a Very Small Part of my own Brain</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>I was the first person ever to record a fMRI signal from the thalamic reticular nucleus.
-
-</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/joseph-viviano-128.jpg" alt="Joseph D Viviano" />
-                        
-                        <span class="post-card-author">
-                            <a href="author/josephdviviano/">Joseph D Viviano</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      3 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
+            
 
         </div>
-
     </div>
-</main>
+</aside>
+
+<!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="/">
+            
+                <img src="assets/images/favicon.png" alt="Joseph D Viviano icon" />
+            
+            <span>Joseph D Viviano</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">Current Practices for Diagnosing Generalization Failure in Applications Might be Misguided</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Current+Practices+for+Diagnosing+Generalization+Failure+in+Applications+Might+be+Misguided&amp;url=https://www.viviano.ca/saliency"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg width="30" height="auto" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" version="1.1" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M161.014,464.013c193.208,0 298.885,-160.071 298.885,-298.885c0,-4.546 0,-9.072 -0.307,-13.578c20.558,-14.871 38.305,-33.282 52.408,-54.374c-19.171,8.495 -39.51,14.065 -60.334,16.527c21.924,-13.124 38.343,-33.782 46.182,-58.102c-20.619,12.235 -43.18,20.859 -66.703,25.498c-19.862,-21.121 -47.602,-33.112 -76.593,-33.112c-57.682,0 -105.145,47.464 -105.145,105.144c0,8.002 0.914,15.979 2.722,23.773c-84.418,-4.231 -163.18,-44.161 -216.494,-109.752c-27.724,47.726 -13.379,109.576 32.522,140.226c-16.715,-0.495 -33.071,-5.005 -47.677,-13.148l0,1.331c0.014,49.814 35.447,93.111 84.275,102.974c-15.464,4.217 -31.693,4.833 -47.431,1.802c13.727,42.685 53.311,72.108 98.14,72.95c-37.19,29.227 -83.157,45.103 -130.458,45.056c-8.358,-0.016 -16.708,-0.522 -25.006,-1.516c48.034,30.825 103.94,47.18 161.014,47.104" style="fill-rule:nonzero;"/></svg>
+
+        </a>
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://www.viviano.ca/saliency"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg width="30" height="auto" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" version="1.1" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M374.244,285.825l14.105,-91.961l-88.233,0l0,-59.677c0,-25.159 12.325,-49.682 51.845,-49.682l40.116,0l0,-78.291c0,0 -36.407,-6.214 -71.213,-6.214c-72.67,0 -120.165,44.042 -120.165,123.775l0,70.089l-80.777,0l0,91.961l80.777,0l0,222.31c16.197,2.541 32.798,3.865 49.709,3.865c16.911,0 33.511,-1.324 49.708,-3.865l0,-222.31l74.128,0Z" style="fill-rule:nonzero;"/></svg>
+
+        </a>
+    </div>
+    <progress class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+<!-- /post -->
+
+<!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs -->
 
 
         <!-- Previous/next page links - displayed on every page -->
@@ -569,7 +568,7 @@ into the {body} of the default.hbs template -->
     <!-- Paginator increased to "infinit" in _config.yml -->
     <!-- if paginator.posts  -->
     <!-- <script>
-        var maxPages = parseInt('1');
+        var maxPages = parseInt('');
     </script>
     <script src="assets/js/infinitescroll.js"></script> -->
     <!-- /endif -->
@@ -592,6 +591,71 @@ into the {body} of the default.hbs template -->
 
 
     <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
+    
+        <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+});
+</script>
+
     
 
     <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->

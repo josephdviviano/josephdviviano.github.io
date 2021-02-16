@@ -8,6 +8,20 @@
     
       
       <item>
+        <title>Current Practices for Diagnosing Generalization Failure in Applications Might be Misguided</title>
+        
+          <description>&lt;p&gt;I’m ecstatic that my first publication in a “real” machine learning venue was the &lt;a href=&quot;https://iclr.cc/&quot;&gt;International Conference on Learning Representations (ICLR)&lt;/a&gt;. I’ll summarize the &lt;a href=&quot;https://openreview.net/forum?id=c9-WeM-ceB&quot;&gt;paper&lt;/a&gt; soon.&lt;/p&gt;
+</description>
+        
+        <pubDate>Sun, 24 Jan 2021 10:32:20 +0000</pubDate>
+        <link>
+        //saliency</link>
+        <guid isPermaLink="true">//saliency</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Redefining Psychiatric Treatment Using Machine Learning</title>
         
           <description>&lt;p&gt;Machine learning can be used to find neurologically-distinct subtypes of Schizophrenia.&lt;/p&gt;
