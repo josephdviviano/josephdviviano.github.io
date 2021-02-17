@@ -16,7 +16,7 @@
 
 &lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/assets/images/saliency/bad-saliency.png&quot; alt=&quot;Bad Saliency&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;These kinds of relationships are found everywhere, and called “spurious correlations”. The problem with spurious correlations is you can’t rely one them… they might be very high in one dataset, but very low in another, because there is no reason for the two variables to be related at all, and the original correlation was just due to bad luck. Humans are generally good at detecting and discarding these kinds of correlations when they are simple, but very bad at discarding them when the real relationships aren’t immediately apparent. For example, most people would discard this correlation as spurious:&lt;/p&gt;
+&lt;p&gt;These kinds of relationships are found everywhere, and called “spurious correlations”. The problem with spurious correlations is you can’t rely one them… they might be very high in one dataset, but very low in another, because there is no reason for the two variables to be related at all, and the original correlation was just due to bad luck. Humans are generally good at detecting and discarding these kinds of correlations when they are simple, but very bad at discarding them when the real relationships aren’t immediately apparent. For example, most people would discard &lt;a href=&quot;https://www.tylervigen.com/spurious-correlations&quot;&gt;this correlation&lt;/a&gt; as spurious:&lt;/p&gt;
 
 &lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/assets/images/saliency/bad-correlation.png&quot; alt=&quot;Bad Correlation&quot; /&gt;&lt;/p&gt;
 
