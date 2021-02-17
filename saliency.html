@@ -11,7 +11,7 @@
 
 
 
-    <title>Current Practices for Diagnosing Generalization Failure in Applications Might be Misguided</title>
+    <title>You Can't Understand A Deep Learning Model by Watching Where It's Looking</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -44,9 +44,8 @@
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="Joseph D Viviano" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Current Practices for Diagnosing Generalization Failure in Applications Might be Misguided" />
-    <meta property="og:description" content="I’m ecstatic that my first publication in a “real” machine learning venue was the International Conference on Learning Representations (ICLR). I’ll summarize the paper soon.
-" />
+    <meta property="og:title" content="You Can't Understand A Deep Learning Model by Watching Where It's Looking" />
+    <meta property="og:description" content="Deep learning’s promise in medical applications are obvious, but it will be hard to get wide acceptance (or regulatory approvals) without doctors being able to understand the “why” behind each prediction. A popular method for doing so is looking at a model’s “saliency” map, which looks like a weather map" />
     <meta property="og:url" content="/saliency" />
     <meta property="og:image" content="//assets/images/saliency/saliency-cover.png" />
     <meta property="article:publisher" content="https://www.facebook.com/josephdviviano" />
@@ -55,9 +54,8 @@
     <meta property="article:modified_time" content="2021-01-24T10:32:20+00:00" />
     <meta property="article:tag" content="Publications" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Current Practices for Diagnosing Generalization Failure in Applications Might be Misguided" />
-    <meta name="twitter:description" content="I’m ecstatic that my first publication in a “real” machine learning venue was the International Conference on Learning Representations (ICLR). I’ll summarize the paper soon.
-" />
+    <meta name="twitter:title" content="You Can't Understand A Deep Learning Model by Watching Where It's Looking" />
+    <meta name="twitter:description" content="Deep learning’s promise in medical applications are obvious, but it will be hard to get wide acceptance (or regulatory approvals) without doctors being able to understand the “why” behind each prediction. A popular method for doing so is looking at a model’s “saliency” map, which looks like a weather map" />
     <meta name="twitter:url" content="/" />
     <meta name="twitter:image" content="//assets/images/saliency/saliency-cover.png" />
     <meta name="twitter:label1" content="Written by" />
@@ -89,8 +87,7 @@
         "@type": "WebPage",
         "@id": "/saliency"
     },
-    "description": "I’m ecstatic that my first publication in a “real” machine learning venue was the International Conference on Learning Representations (ICLR). I’ll summarize the paper soon.
-"
+    "description": "Deep learning’s promise in medical applications are obvious, but it will be hard to get wide acceptance (or regulatory approvals) without doctors being able to understand the “why” behind each prediction. A popular method for doing so is looking at a model’s “saliency” map, which looks like a weather map"
 }
     </script>
 
@@ -103,7 +100,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="Current Practices for Diagnosing Generalization Failure in Applications Might be Misguided" href="feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="You Can't Understand A Deep Learning Model by Watching Where It's Looking" href="feed.xml" />
 
 
 </head>
@@ -294,7 +291,7 @@ into the {body} of the default.hbs template -->
                         
                     
                 </section>
-                <h1 class="post-full-title">Current Practices for Diagnosing Generalization Failure in Applications Might be Misguided</h1>
+                <h1 class="post-full-title">You Can't Understand A Deep Learning Model by Watching Where It's Looking</h1>
             </header>
 
             
@@ -304,7 +301,21 @@ into the {body} of the default.hbs template -->
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <p>I’m ecstatic that my first publication in a “real” machine learning venue was the <a href="https://iclr.cc/">International Conference on Learning Representations (ICLR)</a>. I’ll summarize the <a href="https://openreview.net/forum?id=c9-WeM-ceB">paper</a> soon.</p>
+                    <p>Deep learning’s promise in medical applications are obvious, but it will be hard to get wide acceptance (or regulatory approvals) without doctors being able to understand the “why” behind each prediction. A popular method for doing so is looking at a model’s “saliency” map, which looks like a weather map on top of the image used to make the prediction. The brightest areas are believed to be the regions most involved in the prediction.</p>
+
+<p>This method led to some concern. Take this example, from <a href="https://arxiv.org/abs/1807.00431">this excellent paper by John R. Zech et al.</a>. In it, we can see that the model is using a metal token that radiology technicians place on the patient (top right hand corner) during image capture to make the prediction (the token helps Radiologists distinguish left from right later on). The issue is when the model notices that people who have a particular kind of token are also more likely to have some disease, say pneumonia, or cardiomegaly (enlarged heart), the model will seem to use the token when making the prediction.</p>
+
+<p style="text-align: center;"><img src="/assets/images/saliency/bad-saliency.png" alt="Bad Saliency" /></p>
+
+<p>These kinds of relationships are found everywhere, and called “spurious correlations”. The problem with spurious correlations is you can’t rely one them… they might be very high in one dataset, but very low in another, because there is no reason for the two variables to be related at all, and the original correlation was just due to bad luck. Humans are generally good at detecting and discarding these kinds of correlations when they are simple, but very bad at discarding them when the real relationships aren’t immediately apparent. For example, most people would discard this correlation as spurious:</p>
+
+<p style="text-align: center;"><img src="/assets/images/saliency/bad-correlation.png" alt="Bad Correlation" /></p>
+
+<p>but people often fall for thought leaders who previously predicted some impossible-to-predict event, ignoring the fact that thousands of people were making wrong predictions at the same time and it is possible that this thought leader might have just been lucky. Very common in finance.</p>
+
+<p>This project was inspired by the above problem. We know where doctors want the models to look for disease, and we can see where the model is looking, so maybe we can directly teach the model to look in the right place, and show that this helps the model generalize to new situations better.</p>
+
+<p>I’m ecstatic that my first publication in a “real” machine learning venue was the <a href="https://iclr.cc/">International Conference on Learning Representations (ICLR)</a>. I’ll summarize the <a href="https://openreview.net/forum?id=c9-WeM-ceB">paper</a> soon.</p>
 
                 </div>
             </section>
@@ -493,13 +504,13 @@ into the {body} of the default.hbs template -->
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">Current Practices for Diagnosing Generalization Failure in Applications Might be Misguided</div>
+    <div class="floating-header-title">You Can't Understand A Deep Learning Model by Watching Where It's Looking</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Current+Practices+for+Diagnosing+Generalization+Failure+in+Applications+Might+be+Misguided&amp;url=https://www.viviano.ca/saliency"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=You+Can%27t+Understand+A+Deep+Learning+Model+by+Watching+Where+It%27s+Looking&amp;url=https://www.viviano.ca/saliency"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg width="30" height="auto" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" version="1.1" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M161.014,464.013c193.208,0 298.885,-160.071 298.885,-298.885c0,-4.546 0,-9.072 -0.307,-13.578c20.558,-14.871 38.305,-33.282 52.408,-54.374c-19.171,8.495 -39.51,14.065 -60.334,16.527c21.924,-13.124 38.343,-33.782 46.182,-58.102c-20.619,12.235 -43.18,20.859 -66.703,25.498c-19.862,-21.121 -47.602,-33.112 -76.593,-33.112c-57.682,0 -105.145,47.464 -105.145,105.144c0,8.002 0.914,15.979 2.722,23.773c-84.418,-4.231 -163.18,-44.161 -216.494,-109.752c-27.724,47.726 -13.379,109.576 32.522,140.226c-16.715,-0.495 -33.071,-5.005 -47.677,-13.148l0,1.331c0.014,49.814 35.447,93.111 84.275,102.974c-15.464,4.217 -31.693,4.833 -47.431,1.802c13.727,42.685 53.311,72.108 98.14,72.95c-37.19,29.227 -83.157,45.103 -130.458,45.056c-8.358,-0.016 -16.708,-0.522 -25.006,-1.516c48.034,30.825 103.94,47.18 161.014,47.104" style="fill-rule:nonzero;"/></svg>
 
