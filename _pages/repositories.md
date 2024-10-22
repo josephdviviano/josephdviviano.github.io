@@ -2,7 +2,7 @@
 layout: page
 permalink: /repositories/
 title: repositories
-description: Some projects I've worked on (that I can talk about :smiling_imp:).
+description: Some projects I've worked on (that I can talk about).
 nav: true
 nav_order: 4
 ---
