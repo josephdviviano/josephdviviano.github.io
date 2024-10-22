@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://www.viviano.ca/al-folio/sitemap.xml
+Sitemap: https://josephdviviano.github.io/sitemap.xml
