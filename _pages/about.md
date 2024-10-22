@@ -22,7 +22,7 @@ social: true # includes social icons at the bottom of the page
 
 I get excited about the intersection of science and real world problems.
 
-I'm a multidisciplinary researcher, having worked in basic neuroscience at [York University](https://mri.info.yorku.ca/), psychiatry at [CAMH](https://www.camh.ca/en/science-and-research), radiology with [Imagia](https://imagia.com/), finance with the [CDPQ](https://www.cdpq.com/en), applied machine learning research with [Mila](https://mila.quebec/en/), user engagement with [Google](https://techcrunch.com/2012/05/31/google-calls-its-smart-ad-relevance-syst
+I'm a multidisciplinary researcher, having worked in basic neuroscience at [York University](https://mri.info.yorku.ca/), psychiatry at [CAMH](https://www.camh.ca/en/science-and-research), radiology with [Imagia](https://imagia.com/), finance with the [CDPQ](https://www.cdpq.com/en), applied machine learning research with [Mila](https://mila.quebec/en/), user engagement with [Google](https://techcrunch.com/2012/05/31/google-calls-its-smart-ad-relevance-system-smart-ass-yes-seriously/)
 and RNA biology with [Deep Genomics](https://www.deepgenomics.com/).
 
 As I learn more about science, find myself compelled to explore new fields and build bridges between disciplines. For me, science is only a piece of the puzzle, and I'm facinated by all of the steps required to bring a prototype into production. You can see the scope of my work on [Google Scholar](https://scholar.google.com/citations?user=Jd7wEJ8AAAAJ&hl=en) or [Linkedin](https://www.linkedin.com/in/josephdviviano/), or check out my [resume](https://github.com/josephdviviano/resume/raw/master/jdv-resume.pdf).
