@@ -31,7 +31,7 @@ Long term, I'm most interested in use of AI to power new scientific breakthrough
 
 I'm also an amateur photographer and musician, and I've peppered some of my photos throughout the site, and you can check out my [Soundcloud](https://soundcloud.com/modecollapse) for some rough demos.
 
-![A Thunderstorm at Pic du Midi de Bigorre](assets/img/blog-cover-sat.jpg){: width="666" }
+![A Thunderstorm at Pic du Midi de Bigorre](assets/img/blog-cover-sat.jpg){: width="100%" }
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
