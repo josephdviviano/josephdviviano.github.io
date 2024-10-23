@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: <a href='https://mila.quebec/en'>Mila Quebec AI Institute</a>. Humanistic technology bretheren.
 
 profile:
   align: right
@@ -21,17 +21,15 @@ social: true # includes social icons at the bottom of the page
 
 **This page is under massive construction. I am not Einstein.**
 
-I get excited about the intersection of science and real world problems.
+I believe the technology we need to address the most pressing issues humanity faces cannot be designed without AI first helping us understand the natural world. My main interests lie in the design of AI for Science systems, and leveraging them to enable breakthroughs in bioengineering.
 
-I'm a multidisciplinary researcher, having worked in basic neuroscience at [York University](https://mri.info.yorku.ca/), psychiatry at [CAMH](https://www.camh.ca/en/science-and-research), radiology with [Imagia](https://imagia.com/), finance with the [CDPQ](https://www.cdpq.com/en), applied machine learning research with [Mila](https://mila.quebec/en/), user engagement with [Google](https://techcrunch.com/2012/05/31/google-calls-its-smart-ad-relevance-system-smart-ass-yes-seriously/)
-and RNA biology with [Deep Genomics](https://www.deepgenomics.com/).
+My path has been winding. I'm a multidisciplinary researcher, having first studied Psychology at [Queen's University](https://www.queensu.ca/psychology/), then Neuroscience at [York University](https://mri.info.yorku.ca/). I followed that up with applied biomarker development research in Psychiatry at [CAMH](https://www.camh.ca/en/science-and-research) before studying Machine Learning at [Mila](https://mila.quebec/en) and the [Université de Montréal](https://diro.umontreal.ca/accueil/). I did internships on ML applications in Radiology with [Imagia](https://betakit.com/cancer-focused-imagia-canexia-health-files-for-bankruptcy-18-months-after-merger/) and uncertainty estimation with [Google](https://techcrunch.com/2012/05/31/google-calls-its-smart-ad-relevance-system-smart-ass-yes-seriously/). I worked on automated portfolio construction for [CDPQ](https://www.cdpq.com/en) as part of my work with the [Applied Machine Learning team at Mila](https://mila.quebec/en/industry/industry-services), and worked on deep learning method for RNA biology with [Deep Genomics](https://www.deepgenomics.com/), before landing my current contract Research Engineer position with [Yoshua Bengio's group](https://yoshuabengio.org/) at Mila, with a focus on open source tool development and applications of machine learning, particularly [GFlowNets](https://www.gflownet.org/), in the area of biological discovery.
 
-As I learn more about science, find myself compelled to explore new fields and build bridges between disciplines. For me, science is only a piece of the puzzle, and I'm facinated by all of the steps required to bring a prototype into production. You can see the scope of my work on [Google Scholar](https://scholar.google.com/citations?user=Jd7wEJ8AAAAJ&hl=en) or [Linkedin](https://www.linkedin.com/in/josephdviviano/), or check out my [resume](https://github.com/josephdviviano/resume/raw/master/jdv-resume.pdf).
+I consider myself a strong generalist who loves science and has a knack for building bridges between disciplines. For me, science is only a piece of the puzzle, and I'm fascinated by all of the steps required to build something useful.
 
 Long term, I'm most interested in use of AI to power new scientific breakthroughs, and particularly to discover new technologies to fight climate change, improve food security, and to power continued growth of the economy without compromising the sustainability of our planet.
 
-I'm also an amateur photographer and musician, and I've peppered some of my photos throughout the site, and youcan check out my
-[Soundcloud](https://soundcloud.com/modecollapse) for some rough demos.
+I'm also an amateur photographer and musician, and I've peppered some of my photos throughout the site, and you can check out my [Soundcloud](https://soundcloud.com/modecollapse) for some rough demos.
 
 ![A Thunderstorm at Pic du Midi de Bigorre](assets/img/blog-cover-sat.jpg){: width="666" }
 
