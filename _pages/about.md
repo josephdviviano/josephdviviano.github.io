@@ -29,7 +29,7 @@ I consider myself a strong generalist who loves science and has a knack for buil
 
 Long term, I'm most interested in use of AI to power new scientific breakthroughs, and particularly to discover new technologies to fight climate change, improve food security, and to power continued growth of the economy without compromising the sustainability of our planet.
 
-I'm also an amateur photographer and musician, and I've peppered some of my photos throughout the site, and you can check out my [Soundcloud](https://soundcloud.com/modecollapse) for some rough demos.
+I'm also an amateur photographer and musician. I've peppered some of my photos throughout the site, and you can check out my [Soundcloud](https://soundcloud.com/modecollapse) for some rough demos.
 
 ![A Thunderstorm at Pic du Midi de Bigorre](../assets/img/blog-cover-sat.jpg){: width="100%" }
 
