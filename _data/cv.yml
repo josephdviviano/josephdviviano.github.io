@@ -15,17 +15,16 @@
       institution: Université de Montréal, Montréal, Canada
       year: 2018 - 2020
       description:
-        - title: Internship at Imagia with co-supervision of research by Yoshua Bengio.
-          - Methods for controlling and utilizing saliency maps in medical imaging.
-          - Work led to the ICLR 2021 paper "Saliency is a Possible Red Herring When Diagnosing Poor Generalization".
+        - Internship at Imagia with co-supervision of research by Yoshua Bengio.
+        - Methods for controlling and utilizing saliency maps in medical imaging.
+        - Work led to the ICLR 2021 paper "Saliency is a Possible Red Herring When Diagnosing Poor Generalization".
         - Coursework on RL, representation learning, machine learning, and applications.
-        - title: Description 3.
     - title: MSc Neuroscience, Biology
       institution: York University, Toronto, Canada
       year: 2011 - 2013
       description:
-        - title: High resolution fMRI for characterization of subcortical inhibitory pathway activity with supervision by Keith Schneider.
-          - Work led to the Journal of Neuroscience 2012 paper "Interhemispheric interactions of the human thalamic reticular nucleus".
+        - High resolution fMRI for characterization of subcortical inhibitory pathway activity with supervision by Keith Schneider.
+        - Work led to the Journal of Neuroscience 2012 paper "Interhemispheric interactions of the human thalamic reticular nucleus".
         - Coursework on the biological basis of behaviour, statistics, and basic neuroscience.
         - Teaching included introductory biology & statistics.
     - title:  BSc, Psychology
@@ -62,9 +61,7 @@
       institution: Applied Machine Learning Research Team, Mila - Quebec AI Institute, Montreal, Quebec, Canada
       year: 2020-2021
       description:
-        - title: Consult on, propose, and implement deep learning solutions for Mila's partners.
-          - Optimal financial portfolio allocation
-          - Digital forgery detection.
+        - Consult on, propose, and implement deep learning solutions for Mila's partners in optimal financial portfolio allocation and digital forgery detection.
     - title: PhD to VC Fellow
       institution: Fifty Years, California, United States of America
       year: 2020
