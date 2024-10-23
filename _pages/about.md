@@ -9,6 +9,7 @@ profile:
   image: jdv_profile.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
+    <p>Joseph David Viviano</p>
     <p>6666 Rue Saint Urbain</p>
     <p>Montreal, Quebec</p>
     <p>Canada, H2S 3H1</p>
@@ -29,16 +30,10 @@ As I learn more about science, find myself compelled to explore new fields and b
 
 Long term, I'm most interested in use of AI to power new scientific breakthroughs, and particularly to discover new technologies to fight climate change, improve food security, and to power continued growth of the economy without compromising the sustainability of our planet.
 
-I'm also an amateur photographer and musician, and I've peppered some of my work throughout the site. You can check out my
-[Instagram](https://www.instagram.com/josephdviviano/) and
-[Soundcloud](https://soundcloud.com/modecollapse) for more.
+I'm also an amateur photographer and musician, and I've peppered some of my photos throughout the site, and youcan check out my
+[Soundcloud](https://soundcloud.com/modecollapse) for some rough demos.
 
-I'd love to connect
-([Twitter](https://twitter.com/josephdviviano)/
-[Facebook](https://www.facebook.com/josephdviviano))
-if you're working on something new!
-
-![Self Portrait]({{site.baseurl}}/assets/images/joseph-viviano-about.png){: width="666" }
+![A Thunderstorm at Pic du Midi de Bigorre](assets/img/blog-cover-sat.jpg){: width="666" }
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
