@@ -1,0 +1,105 @@
+Joseph D Viviano
++1.416.500.6260
+www.viviano.ca
+joseph@viviano.ca
+Centre for Addiction and Mental Health
+250 College St. Toronto, ON, M5T 1R8
+
+EXPERIENCE
+
+Throughout my career, I've demonstrated the consistent ability to take the lead on large projects and deliver results. Most recently I managed the development of a sophisticated set of tools for handling and analyzing biomedical data, and a set of machine learning tools to predict the best course of treatment for patients, positioning my research team at the forefront of what's possible in our field.
+
+Research Methods Specialist
+2014--present
+Kimel TIGRlab, Centre for Addiction and Mental Health
+
++ Managed the design & implementation (team of 5) of a sophisticated data management platform used daily by researchers (team of 20).
++ Invented an accurate machine learning test that identifies vulnerable patients, & directed 2 other similar successful projects, including 1 deep learning project.
++ Managed R&D (team of 3) of quality assurance tools that repair corrupted data & detect critical hardware failures.
++ Led R&D on multiple novel analytic approaches that have guided the majority of the lab's research during my tenure.
++ Lead developer of production analysis code used by our scientists.
++ Mentored scientists, post docs, graduate students, & engineers.
++ Managed a 22-node compute cluster.
++ Designed & contributed key analysis, writing, & tools for 2 successfully funded grants & 7 published papers.
+
+
+Data Analyst
+2013--14
+CANN Lab, York University
+
++ Architect of a custom platform for data pipeline development, now used in multiple research institutions.
++ Responsible for maintaining a fleet of 5 computers.
++ Mentored graduate students in neuroimaging analysis approaches.
++ Designed & contributed key analysis & tools to 2 published papers.
+
+
+Researcher
+2011--13
+Schneider Lab, York University
+
++ Successfully identified a small region of the human thalamus never before observed in a living person using a new high-resolution imaging approach & unique visual stimulus.
++ Portions of master's thesis published in the Journal of Neuroscience.
++ Led 11 labs on biology & statistics including evaluations & assessments.
++ Designed & contributed key analysis & tools to 3 published papers.
+
+
+RESEARCH
+
++ Publications: I've led 3 complete research projects as first author, & contributed crucial analysis & direction to an additional 12.
++ Precision Medicine: I'm facinated by inventing methods for extracting new medical knowledge from biological data.
++ Deep Learning: I'm interested in the relationship with theoretical neuroscience, as well as the numerous applications to medical data.
+
+
+TECHNOLOGIES
+
++ Python, Proficient
+    + Numpy, scipy, scikit-learn, tensorflow.
++ MATLAB, Proficient
++ R, Intermediate
++ Unix Administration, Intermediate
+    + Webservers, virtualization, & containerization.
++ C, Familiar
++ SQL, Familiar
+    + PostgreSQL, mySQL.
+
+
+EDUCATION
+
+Certified System Administrator
+2016
+Linux Foundation
+
+MSc. Biology, With Distinction
+2011--13
+York University, Toronto, ON.
+
+BSc. Psychology,  Hons.
+2005--09
+Queen's University, Toronto, ON
+
+
+COURSES
+
+Neural Networks for Machine Learning
+2017
+Coursera
+
+Hadoop Platform & Application Framework
+2017
+Coursera
+
+Machine Learning
+2016
+Coursera
+
+The Essentials of System Administration
+2016
+The Linux Foundation
+
+Intro to High Performance Computing
+2014--16
+SciNet, University of Toronto
+
+Intro to Data Science
+2013
+Coursera

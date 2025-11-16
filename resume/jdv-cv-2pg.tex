@@ -1,0 +1,424 @@
+% Pedigree fools fools.
+\documentclass[a4paper,11pt,oneside]{book}
+\usepackage[top=0.65in, bottom=0.65in, left=1in, right=1in]{geometry} % margins
+\NeedsTeXFormat{LaTeX2e}
+\usepackage{scrextend} % for indenting blocks of text
+\usepackage{xcolor}    % for colors
+\usepackage{hyperref}
+\usepackage{datetime}  % for compile date
+\usepackage{multicol}  % column formatting
+\usepackage{enumitem}  % for bullets
+\usepackage{textcomp}  % for trademark.
+\usepackage{tikz}      % for link graphic
+
+\RequirePackage{parskip}
+
+% colour
+\definecolor{highlight}{rgb}{0.75,0.1,0.1}
+\definecolor{lightgray}{gray}{0.25} % made darker
+\definecolor{lightblue}{rgb}{0.25, 0.25, 0.75}
+\colorlet{textcolor}{black}
+\colorlet{headercolor}{black}
+
+% link colouring.
+\hypersetup{
+    colorlinks=true,
+    linkcolor=lightblue,
+    filecolor=lightblue,
+    urlcolor=lightblue,
+}
+
+% font
+\RequirePackage{fontspec}
+\newfontfamily\bodyfont[]{Brandon Grotesque Regular}
+\newfontfamily\thinfont[]{Brandon Grotesque Light}
+\newfontfamily\headingfont[]{Brandon Grotesque Bold}
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont[Mapping=tex-text, Color=textcolor]{Brandon Grotesque Light}
+
+% links
+\newcommand{\externallink}{%
+    \hspace{1pt}\tikz[x=1.2ex, y=1.2ex, baseline=-0.05ex]{%
+        \begin{scope}[x=1ex, y=1ex]
+            \clip (-0.1,-0.1)
+                --++ (-0, 1.2)
+                --++ (0.6, 0)
+                --++ (0, -0.6)
+                --++ (0.6, 0)
+                --++ (0, -1);
+            \path[draw,
+                line width = 0.5,
+                rounded corners=0.5]
+                (0,0) rectangle (1,1);
+        \end{scope}
+        \path[draw, line width = 0.5] (0.5, 0.5)
+            -- (1, 1);
+        \path[draw, line width = 0.5] (0.6, 1)
+            -- (1, 1) -- (1, 0.6);
+        }
+    }
+
+\newcommand\link[2]{\href{#1}{#2 \externallink}}
+
+\newcounter{colorCounter}
+\def\@sectioncolor#1#2#3{%
+  {%
+    \color{%
+      \ifcase\value{colorCounter}%
+        blue\or%
+        red\or%
+        orange\or%
+        green\or%
+        purple\or%
+        brown\else%
+        headercolor\fi%
+    } #1#2#3%
+  }%
+  \stepcounter{colorCounter}%
+}
+
+\renewcommand{\section}[1]{
+  \par\vspace{\parskip}
+  {%
+    \LARGE\headingfont\color{headercolor}%
+    \@sectioncolor #1%
+  }
+  \par\vspace{\parskip}
+}
+
+\renewcommand{\subsection}[2]{
+  \par\vspace{.5\parskip}%
+  \Large\headingfont\color{headercolor} #2%
+  \par\vspace{.25\parskip}%
+}
+
+\pagestyle{empty}
+
+% list environment
+\setlength{\tabcolsep}{0pt}
+\newenvironment{entrylist}{%
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
+}{%
+  \end{tabular*}
+}
+\renewcommand{\bfseries}{\headingfont\color{headercolor}}
+\newcommand{\entry}[4]{%
+  \parbox[t]{2.5cm}{#1\hfill}\hspace{0cm}\parbox[t]{11.8cm}{%
+    \textbf{#2}%
+    \hfill%
+    {\footnotesize\addfontfeature{Color=lightgray} #3}\
+    \vspace{1.2mm}
+    \begin{itemize}[leftmargin=-1.5cm,itemsep=0.8mm]#4\end{itemize}\vspace{0.8\parsep}%
+  }}
+
+\renewcommand{\bfseries}{\headingfont\color{headercolor}}
+\newcommand{\skills}[2]{%
+  \parbox[t]{3cm}{\hfill#1&}\hspace{1cm}\parbox[t]{10.65cm}{%
+     \textcolor{lightgray}{#2}{\parsep}%
+  }\\\vspace{4.5mm}}
+
+\newcommand\sectionheading[1]{
+    \normalsize
+    \noindent
+    \leftskip=0in
+    \textbf{#1\\
+    \vspace{3.5mm}}
+}
+
+\newcommand\paper[1]{
+    #1\\
+    \vspace{3.5mm}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\thispagestyle{empty} % remove number on first page
+
+\fboxsep0pt
+
+% Header.
+\noindent
+\begin{minipage}[t]{0.49\linewidth}\vspace{0pt}
+
+    \topskip0pt
+    \vspace*{\fill}
+    \noindent\huge\leftskip=0.075in\textbf{JOSEPH D VIVIANO}
+    \vspace*{\fill}
+
+\end{minipage}
+\begin{minipage}[t]{0.45\linewidth}\vspace{0pt}\raggedleft
+
+    joseph@viviano.ca\ | \link{https://www.viviano.ca}{viviano.ca}\\
+    \link{https://scholar.google.com/citations?user=Jd7wEJ8AAAAJ&hl=en}{GScholar} \\
+    \link{https://twitter.com/josephdviviano}{twitter.com/josephdviviano}\\
+    \link{https://www.github.com/josephdviviano}{github.com/josephdviviano}%\\ %Deep Genomics, 6666 Rue Saint Urbain, Montr\'eal
+
+\end{minipage}
+\vspace{0.1in}
+
+\begin{flushleft}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sectionheading{EDUCATION}
+
+\entry
+{2018--2020}
+{MSc., Computer Science}
+{Universit\'e de Montr\'eal, QC/CA.}
+{\item Internship Supervised by \link{https://yoshuabengio.org/}{Dr. Yoshua Bengio} \newline
+`Methods for controlling and utilizing saliency maps in medical imaging'.} \\\
+
+\entry
+{2011--2013}
+{MSc. with Distinction, Biology}
+{York University, ON/CA.}
+{\item Thesis Supervised by \link{https://www.linkedin.com/in/keith0/}{Dr. Keith Schneider} \newline
+`Tremotopic mapping of the human thalamic reticular nucleus'.}\\\
+
+\entry
+{2005--2009}
+{BSc. Hons., Psychology.}
+{Queen's University, ON/CA.}
+{}
+%{\item Coursework in Biology, Psychology, Statistics, and Philosophy.} \\\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sectionheading{PROFESSIONAL EXPERIENCE}
+
+\entry
+{2023--Now}
+{ML Scientist}
+{Mila Qu\'ebec AI Institute, QC/CA.}
+{
+    \item Lead developer of \link{https://github.com/gfnorg/torchgfn}{torchgfn} GFlowNet library (290 stars, 49 forks, 15 contributors).
+    \item GFlowNet application collaborations: Antibody design ()\link{https://www.amgen.com/}{Amgen}), distributed search scaling (\link{https://www.intel.com/content/www/us/en/homepage.html}{Intel}).
+    \item Lab engineering support for ML for Science projects. % and scientific content coordination.
+    \item Grant writing: Mila's compute infrastructure, AI for Metabolic Engineering with \link{https://www.jbei.org/}{Joint BioEnergy Institute}.
+} \\\
+
+\entry
+{2021--2022}
+{ML Research Scientist}
+{\link{https://www.deepgenomics.com/}{Deep Genomics}, QC/CA.}
+{
+    \item Self-supervised learning for biological sequence representations.
+    \item Methods for cell-type generalization.
+    \item Drug screening anomaly detection pipeline.
+} \\\
+
+%\entry
+%{2021--Now}
+%{Scientific Mentor}
+%{\link{https://creativedestructionlab.com/streams/ai/cdl-montreal-artificial-intelligence/}{Creative Destruction Lab Montr\'eal}, QC/CA.}
+%{
+%    \item Performed technical assessments of startups and provided feedback for a business and investor focused audience.
+%    \item Technical direction for startups in the NLP, CV, and ML for Bio spaces.
+%} \\\
+
+\entry
+{2020--2021}
+{Applied Research Scientist}
+{Mila Qu\'ebec AI Institute, QC/CA.}
+{
+    \item Consult on, propose, and implement deep learning solutions for Mila's partners: Optimal portfolio allocation (finance) \& digital forgery-detection (fraud).
+    % \item Collaboration with Mila researchers on medical applications research and cognitively-inspired AI.
+} \\\
+
+%\entry
+%{2020}
+%{PhD to VC Fellow}
+%{Fifty Years, CA/US.}
+%{
+%    \item \link{https://fiftyyears.com/phdvc}{Course} where I sourced, diligenced, and  deep-tech pre-seed/seed stage companies, performed due diligence on them, \& helped source technical talent.
+%} \\\
+
+\entry
+{2020}
+{Research Intern}
+{Google, PA/US.}
+{
+    % \item Built a research pipeline to test ideas on an internal click through rate dataset. % This pipeline will be used as a testbed for future research collaborations.
+    \item Uncertainty (epistemic) estimation methods for the \link{https://techcrunch.com/2012/05/31/google-calls-its-smart-ad-relevance-system-smart-ass-yes-seriously/}{search ads predicted click through rate team}.
+} \\\
+
+\entry
+{2019}
+{Research Intern}
+{Imagia, QC/CA.}
+{
+    \item Developed methods for combining clinical notes with medical images to improve classification performance and for localizing disease without explicit labels of where the disease is located in an image.
+} \\\
+
+\entry
+{2014--2017}
+{Research Methods Specialist}
+{Centre for Addiction and Mental Health, ON/CA.}
+{
+    \item Biomarkers for  vulnerable \link{https://www.sciencedirect.com/science/article/abs/pii/S0006322318314392}{schizophrenia} and \link{https://journals.plos.org/ploscompbiol/article?rev=2&id=10.1371/journal.pcbi.1006376}{Alzheimer's} patients.
+    \item Designed, built, and managed compute infrastructure and data management platform. %(team of 5) a \link{https://github.com/TIGRLab/datman}{data management platform} 22-node compute cluster, and \link{https://github.com/TIGRLab/qcmon}{QA tools} used by team of 20.
+    % \item Contributions to 2 successfully funded grants \& 15 published papers.
+} \\\
+
+%\entry
+%{2013--2014}
+%{Research Assistant}
+%{York University, ON/CA.}
+%{
+%   \item Development of a custom data pipeline platform.
+%   \item Mentored graduate students in neuroimaging analysis approaches, and contributed to 2 publications.
+%} \\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \sectionheading{PROJECTS}
+
+% \skills
+
+% \skills
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\sectionheading{SKILLS}
+
+%\skills
+%{Python}{Tensorflow, pytorch, numpy, pandas, scipy, scikit-learn.}
+
+%\skills
+%{Unix Administration}{Certified system administrator by Linux Foundation (2016).}  % Webservers, virtualisation, \& containerisation.
+
+%\skills
+%{Other Languages}{R, MATLAB, Java, C, SQL.} \\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sectionheading{COMMUNITY SERVICE}
+
+\entry
+{2023-2025}
+{Area Chair}
+{Meta Reviewing}
+{Paper Adjudication for \link{https://neurips.cc/virtual/2023}{NeurIPS Datasets and Benchmarks Track}.}
+
+% \entry
+% {2023}
+% {Grant Reviewing}
+% {Health Data Nexus Dataset Grants}
+% {Reviewed 5 Proposals on the Collection of Healthcare-focused ML-ready datasets.}
+
+\entry
+{2014-2023}
+{Reviewing}
+{Paper reviews for conferences and journals}
+{Reviews for \link{https://iclr.cc/}{ICLR}, \link{http://preregister.science/}{NeurIPS Pre-registration in ML Workshop}, \link{https://www.biologicalpsychiatryjournal.com/}{Biological Psychiatry}, \link{https://www.midl.io/}{MIDL}, \link{https://www.pnas.org/}{PNAS}, \& \link{https://journals.plos.org/plosone/}{PLOS ONE}.}
+
+%\entry
+%{2019}
+%{Instruction}
+%{Deep Learning for Neuroscientists}
+%{A 1.5-3 hour course on the fundementals of deep learning for a non-CS audiance given at \link{http://www.crm.umontreal.ca/2019/MAIN2019/index_e.php}{MAIN 2019} and \link{https://brainhackmtl.github.io/global2019/}{Brainhack 2019}.}
+
+%\entry
+%{2015--2016}
+%{Instructor}
+%{Python for MRI Data Analysis}
+%{Designed and taught course on MRI data analysis using Numpy.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sectionheading{SELECTED PUBLICATIONS}
+
+\paper{Boussif O, Ezzine LN, \textcolor{highlight}{Viviano JD}, Koziarski M, Jain M, Malkin N, Bengio E, Assouel R, Bengio Y. Action abstractions for amortized sampling. ICLR, 2025.}
+
+\paper{\textcolor{highlight}{Viviano JD}*, Younis OG*, Choi S*, Schmidt V, Bengio Y, Lahlau S. torchgfn: A PyTorch GFlowNet library. arXiv, 2025.}
+
+\paper{Bertin P, \textcolor{highlight}{Viviano JD}, Tejada-Lapuerta A, Wang W, Bauer S, Theis FJ, Bengio Y. A scalable gene network model of regulatory dynamics in single cells. arXiv, 2025.}
+
+\paper{Delaunay P, Bouthillier X, Breuleux O, Ortiz-Gagné S, Bilaniuk O, Normandin F, Bergeron A, Carrez B, Alain G, Blanc S, \textcolor{highlight}{Viviano JD}, et al. Introducing Milabench: Benchmarking Accelerators for AI. arXiv, 2024.}
+
+\paper{Cohen JP, \textcolor{highlight}{Viviano JD}, Bertin P, Morrison P, Torabian P, Guarrera M, Lungren MP, Chaudhari A, Brooks R, Hashir M, Bertrand H. TorchXRayVision: A library of chest X-ray datasets and models. Medical Imaging with Deep Learning (MIDL), 2022.}
+
+\paper{Cohen JP, Cao T, \textcolor{highlight}{Viviano JD}, Huang CW, Fralick M, Ghassemi M, Mamdani M, Greiner R, Bengio Y. Problems in the deployment of machine-learned models in health care. Canadian Medical Association Journal, 193(35), E1391-E1394.}
+
+\paper{Luccioni A, \textcolor{highlight}{Viviano JD}. What’s in the Box? A Preliminary Analysis of Undesirable Content in the Common Crawl Corpus. The Joint Conference of the Association for Computational Linguistics and the International Joint Conference on Natural Language Processing (ACL-IJCNLP), 2021.}
+
+\paper{\textcolor{highlight}{Viviano JD}, Simpson B, Dutil F, Bengio Y, Cohen JP. Saliency is a Possible Red Herring When Diagnosing Poor Generalization. International Conference on Learning Representations (ICLR), 2021.}
+
+\paper{\textcolor{highlight}{Viviano JD}, Buchanan RW, Calarco N, Gold J, Foussias G, Bhagwat N, Stefanik L, Hawco C, Malhotra AL, Voineskos AN, for the SPINS group. 2018. Resting-state connectivity biomarkers of cognitive performance and social function in schizophrenia spectrum disorders and healthy controls. Biological Psychiatry. 84(9), 665-674.}
+
+%\paper{Overton DJ, Bhagwat N, \textcolor{highlight}{Viviano JD}, Jacobs GR, Voineskos AN. Identifying psychosis spectrum youth using support vector machines and cerebral blood perfusion as measured by arterial spin labeled fMRI. NeuroImage: Clinical. 27, 102304.}
+
+\paper{Bhagwat N, \textcolor{highlight}{Viviano JD}, Voineskos AN, Chakravarty MM. 2018. Modeling and prediction of clinical symptom trajectories in Alzheimer's disease using longitudinal data. 2018. PLoS Computational Biology. 14(9), e1006376.}
+
+%Spreng NR, Stevens WD, \textcolor{highlight}{Viviano JD}, Schacter D. 2016. Attenuated anticorrelation between the default and dorsal attention networks with aging: Evidence from task and rest. Neurobiology of Aging. 45, 149-160. \\\
+
+\paper{DeSimone K, \textcolor{highlight}{Viviano JD}, Schneider KA. 2015. Population receptive field estimation reveals new retinotopic maps in human subcortex. Journal of Neuroscience, 35(27):9836-47.}
+
+\paper{\textcolor{highlight}{Viviano JD}, Schneider KA. 2015. Interhemispheric interactions of the human thalamic reticular nucleus. Journal of Neuroscience, 35(5):2026-32.}
+
+%Viviano J, Klauer D, Olmos S, \textcolor{highlight}{Viviano JD}. Retrospective comparison of the George Gague\texttrademark registration and the sibilant phoneme registration for constructing OSA oral appliances. CRANIO, 1-9. \\\
+
+%Lemire-Rodger S, Lam J, \textcolor{highlight}{Viviano JD}, WD Stevens, Spereng RN, Turner GR. 2019. Inhibit, switch, and update: a within-subject fMRI investigation of executive control. Neuropsychologia. 132, 107-134. \\\
+
+%Jacobs GR, Ameis SH, Ji JL, \textcolor{highlight}{Viviano JD}, Dickie EW, Wheeler AL, Stojanovski S, Anticevic A, Voineskos AN. 2019. Developmentally divergent sexual dimorphism in the cortico-striatal-thalamic-cortical psychosis risk pathway. Neuropsychopharmacology. 44, 1649-1658. \\\
+
+%Hawco C, Buchanan RW, Calarco N, Mulsant BH, \textcolor{highlight}{Viviano JD}, Dickie EW, Argylean M, Gold JM, Iacoboni M, DeRosse P, Foussias G, Malhorta AK, Voineskos AN, for the SPINS group. 2019. Seperable and replicable neural strategies during social brain function with and without severe mental illness. American Journal of Psychiatry. Jan 4 (Online). \\\
+
+%Stojanovski S, Felsky D, \textcolor{highlight}{Viviano JD}, Shahab S, Bangali R, Burton C, Devenyi GA, O'Donnell LJ, Szatmari P, Chakravarty MM, Ameis S, Schachar R, Voineskos AN, Wheeler AL. 2018. Polygenic risk and neural substrates of attention-deficit/hyperactivity disorder symptoms in youth with a history of mild traumatic brain injury. Biological Psychiatry. 85(5), 408-416. \\\
+
+%Hawco C, Voineskos AN,  Steeves J, Dickie EW, \textcolor{highlight}{Viviano JD}, Downar J, Blumberger D, Daskalakis ZJ. 2018. Spread of activity following TMS is related to intrinsic resting connectivity to the salience network: a concurrent TMS-fMRI study. Cortex. 108, 160-172. \\\
+
+%Chavez S, \textcolor{highlight}{Viviano JD}, Zamyadi M, Kingsley PB, Kochunov P, Strother S, Voineskos AN. 2018. A novel DTI-QA tool: automated metric extraction exploiting the sphericity of an agar filled phantom. Magnetic Resonance Imaging. 46, 28-39. \\\
+
+%Hawco C, \textcolor{highlight}{Viviano JD}, Chavez S, Dickie EWE, Calarco N, Kochunov P, Argyelan M, Turner J, Malhortra AK, Buchanan RW, Voineskos AN. 2018. A longitudinal human phantom study of multi-center T1-weighted, DTI, and resting-state fMRI data. Psychiatric Research: Neuroimaging. June 9 (Online).  \\\
+
+%Dickie EW, Anticevic A, Smith DE, Coalson TS, Manogaran M, Calarco N, \textcolor{highlight}{Viviano JD}, Glasser MF, Van Essen DC, Voineskos AN. 2018. Ciftify: A framework for surface-based analysis of legacy MR acquisitions. Neuroimage. 197, 818-826. \\\
+
+%Dickie EW, Ameis SH, \textcolor{highlight}{Viviano JD}, Smith DE, Calarco N, Shahab S, Voineskos AN. 2018. Personalized intrinsic network topography mapping and functional connectvitiy deficits in autism spectrum disorder. Biological Psychiatry. 84(4), 278-286. \\\
+
+%\textcolor{highlight}{Viviano JD}, Park MTM, Voineskos AN, Chakravarty MM. 2018. Homology of functional connectivity and structural covariance between the human cerebellum and cortex. Under review. \\\
+
+%Kochunov P*, Dickie EW*, \textcolor{highlight}{Viviano JD}*, Turner J, Kingsley PB, Jahanshad N, Thompson P, Ryan M, Fiermans E, Novikov D, Hong EL, Malhotra AK, Buchanan RW, Chavez S, Voineskos AN. 2017. Integration of routine QA data into mega-analysis may improve quality and sensitivity of multi-site diffusion tensor imaging studies. Human Brain Mapping. 39(2), 1015-1023. \\\
+
+%Hawco C, Kovacevic N, Malhotra AK, Buchanan RW, \textcolor{highlight}{Viviano JD}, Iacoboni M, McIntosh AR, Voineskos AN. 2017. Neural activity while imitating emotional faces is related to both lower and higher-level social cognitive performance. Scientific Reports. 7, 1244. \\\
+
+%Ameis SH, Lerch JP, Taylor M, Lee W, \textcolor{highlight}{Viviano JD}, Pipitone J, Nazeri A, Croarkin P, Voineskos A, Crosbie J, Brian J, Soreni N, Schachar R, Arnold P, Anagnostou E. 2016. A diffusion tensor imaging study in children with ADHD, autism spectrum disorder, OCD, and matched controls: distinct and non-distinct white matter disruption and dimensional brain-behavior relationships. American Journal of Psychiatry. 173(12):1213-1222. \\\
+
+%Wheeler AL, Felsky D, \textcolor{highlight}{Viviano JD}, Stojanovski S, Ameis SH, Szatmari P, Lerch JP, Chakravarty MM, Voineskos AN. 2016. BDNF and sex dependent effects on amygdala-cortical connectivity and depression risk in children and youth. 2017. Cerebral Cortex. 1-11. \\\
+
+%McKetton L, Williams J, \textcolor{highlight}{Viviano JD}, Yücel YH, Gupta N, Schneider KA. 2015. High-resolution structural magnetic resonance imaging of the human subcortex in vivo and postmortem. Journal of Visualized Experiments, 106. \\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sectionheading{INVITED TALKS}
+\entry
+{2024}
+{Keynote Speaker}
+{FACSS SciX}
+{Could an AI Understand a Scientist?}
+
+% \entry
+% {2024}
+% {Invited Speaker}
+% {Faculty of Pharmacy, University of Montreal}
+% {Machine Learning for Drug Discovery and Development}
+
+\entry
+{2023}
+{}
+{Joint Genome Instuitute Annual User Meeting}
+{\textcolor{highlight}{Viviano JD}. Considerations for Machine Learning-Aided Lab in the Loop Scientific Discovery.}
+
+%\entry
+%{2015}
+%{}
+%{Human Brain Mapping Data Workshop}
+%{\textcolor{highlight}{Viviano JD}, Chavez S, Pipitone JC, Voineskos AN. Tracking the quality of ongoing acquisitions.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{flushleft}
+
+\vfill
+
+\begin{center}
+\small{Compiled on \usdate\today.}
+\end{center}
+
+\end{document}
