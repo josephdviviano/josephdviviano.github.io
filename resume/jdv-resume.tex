@@ -1,0 +1,375 @@
+% Pedigree fools fools.
+\documentclass[a4paper,12pt,oneside]{book}
+\usepackage[top=0.35in, bottom=0.35in, left=0.2in, right=0.2in]{geometry} % margins
+\NeedsTeXFormat{LaTeX2e} % not sure I need this...
+\usepackage{scrextend}   % indenting blocks of text
+\usepackage{enumitem}    % for bullets
+\usepackage{xparse}
+\usepackage{tikz}  % for link graphic
+
+\usepackage{multicol}
+\setlength{\columnsep}{0.75cm}
+
+\usepackage{xcolor}
+\definecolor{highlight}{rgb}{0.75, 0.1, 0.1}
+\definecolor{lightgray}{gray}{0.25}
+\definecolor{lightblue}{rgb}{0.25, 0.25, 0.75}
+\definecolor{bg}{gray}{0.9}
+\colorlet{textcolor}{black}
+\colorlet{headercolor}{black}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=lightblue,
+    filecolor=lightblue,
+    urlcolor=lightblue,
+}
+
+\RequirePackage{fontspec}
+\newfontfamily\bodyfont[]{Brandon Grotesque Regular}
+\newfontfamily\thinfont[]{Brandon Grotesque Light}
+\newfontfamily\headingfont[]{Brandon Grotesque Bold}
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont{Brandon Grotesque Light}[Mapping=tex-text, Color=textcolor]
+
+% Page numbering.
+\pagenumbering{gobble} % rm pg. #, reset to 1
+\setlist[1]{noitemsep} % sets the itemsep and parsep for lists to 0
+
+% Formatting.
+\newcommand{\externallink}{%
+    \hspace{1pt}\tikz[x=0.8ex, y=0.8ex, baseline=-0.05ex]{%
+        % Draw first oval link
+        \draw[line width=0.2]
+            (0,0) circle [x radius=0.6, y radius=0.3, rotate=45];
+        % Draw second oval link
+        \draw[line width=0.2]
+            (0.48,0.48) circle [x radius=0.6, y radius=0.3, rotate=45];
+    }%
+}
+
+\newcommand\link[2]{\href{#1}{#2 \externallink}}
+
+\newcommand{\headingsR}[1]{
+    \vspace{1.2mm}
+    \noindent\large\leftskip=0.15in\textbf{#1}
+    \vspace{1.2mm}
+}
+
+\newcommand\headingsL[1]{
+    \vspace{1.2mm}
+    \noindent\large\leftskip=0in\textbf{#1}
+    \vspace{1.2mm}
+}
+
+\newcommand\infoL[1]{
+    \noindent\small\leftskip=0in{#1}
+}
+
+\newcommand\summaryL[1]{
+    \noindent\vspace{-2.5mm}\small{#1}
+}
+
+\newcommand\listL[1]{
+    \vspace{-3.5mm}\begin{itemize}[leftmargin=0.15in]\setlength\itemsep{0.65mm}\small{#1}\end{itemize}
+}
+
+\newcommand\infoR[1]{
+    \small\leftskip=0.15in\noindent{#1}
+}
+
+\newcommand\listR[1]{
+    \vspace{-3.5mm}\begin{itemize}[leftmargin=0.30in]\setlength\itemsep{0.65mm}\small{#1}\end{itemize}
+}
+
+\renewcommand{\bfseries}{\headingfont\color{headercolor}}
+\newcommand{\entryL}[3]{
+    \noindent\small\leftskip=0in\textbf{#1}
+        {\hfill\small\textcolor{lightgray}{#2}\\
+            {\small\addfontfeature{Color=black} #3}\
+            \vspace{0.2mm}
+    }
+}
+
+\renewcommand{\bfseries}{\headingfont\color{headercolor}}
+\newcommand{\entrysmL}[2]{
+    \noindent\small\leftskip=0in\textbf{#1}
+        \hfill\small\textcolor{lightgray}{#2}\\
+        \vspace{-4mm}
+}
+
+\renewcommand{\bfseries}{\headingfont\color{headercolor}}
+\newcommand{\entryR}[3]{
+    \noindent\small\leftskip=0.15in\textbf{#1}
+        {\hfill\small\textcolor{lightgray}{#2}\\
+            {\small\addfontfeature{} #3}\
+            \vspace{0.2mm}
+    }
+}
+
+\renewcommand{\bfseries}{\headingfont\color{headercolor}}
+\newcommand{\entrysmR}[2]{
+    \noindent\small\leftskip=0.15in\textbf{#1}
+        \hfill\small\textcolor{lightgray}{#2}\\
+        \vspace{-4mm}
+}
+
+\begin{document}
+\thispagestyle{empty} % remove number on first page
+\fboxsep0pt
+
+% Header.
+\noindent
+\begin{minipage}[t]{0.49\linewidth}\vspace{0pt}
+
+    \topskip0pt
+    \vspace*{\fill}
+    \noindent\huge\leftskip=0.26in\textbf{JOSEPH D VIVIANO}
+    \vspace*{\fill}
+
+\end{minipage}
+\begin{minipage}[t]{0.45\linewidth}\vspace{0pt}\raggedleft
+
+    joseph@viviano.ca\ | \link{https://www.viviano.ca}{viviano.ca} | \link{https://scholar.google.com/citations?user=Jd7wEJ8AAAAJ&hl=en}{GScholar} \\
+    \link{https://x.com/josephdviviano}{x.com/josephdviviano} | \link{https://www.github.com/josephdviviano}{github.com/josephdviviano}
+
+\end{minipage}
+\vspace{0.05in}
+
+% Left column.
+\begin{minipage}[t]{0.55\linewidth}
+
+\headingsL{EXPERIENCE}
+
+\entryL
+{ML Scientist}{2022--Now}
+{\link{https://mila.quebec/}{Yoshua Bengio's Group, Mila Qu\'ebec AI Institute}}
+
+\listL
+{
+% \item ML Research and Development for Applied ML for Science projects stemming from the research of Yoshua Bengio's group.
+% \item Macro action abstractions for amortized samplers (e.g., GFlowNets).
+\item Lead developer of \link{https://github.com/gfnorg/torchgfn}{TorchGFN}, a modular and easy to extend open source GFlowNet library (an amortized sampling method used in many AI for science applications).
+\item Collaborations with \link{https://www.amgen.com/}{Amgen} (ML for antibody design) and \link{https://www.intel.com/content/www/us/en/homepage.html}{Intel} (large scale training of GFlowNets).
+\item Developed a collaboration and wrote a grant proposal with the \link{https://www.jbei.org/}{Joint BioEnergy Institute} to develop a multi-center AI for Metabolic Engineering research collaboration.
+\item ML engineering support for the lab, largely to optimize code-bases for efficient training (e.g., \link{https://arxiv.org/abs/2406.08506}{RGFN} and \link{https://arxiv.org/abs/2503.20027}{FLECS}.)
+}
+
+\entryL
+{ML Research Scientist}{2021--22}
+{\link{https://www.deepgenomics.com/}{Deep Genomics}}
+
+\listL
+{
+\item I investigated architectures for sequence-based RNA foundation models, methods for cell-type generalization (a core challenge for drug discovery), \& anomaly detection pipeline for the drug screening platform allowing for early detection of laboratory failures.
+}
+
+\entryL
+{Scientific Mentor}{2021--Now}
+{\link{https://creativedestructionlab.com/streams/ai/cdl-montreal-artificial-intelligence/}{Creative Destruction Lab Montr\'eal}}
+
+\listL
+{
+\item Performed technical assessment \& consulting for early-stage startups.
+\item Guidance on ML and AI strategy towards next funding round.
+% \item Technical direction for startups in the NLP, CV, and ML for Bio spaces.
+}
+
+\entryL
+{Applied Research Scientist}{2020--21}
+{\link{https://mila.quebec/}{Mila Technology Transfer, Mila Qu\'ebec AI Institute}}
+
+\listL
+{
+\item Collaborative development of a deep-learning driven equity momentum trading strategy (\link{https://www.cdpq.com/en}{CDPQ}) \& digital forgery detection (\link{https://www.jumio.com/}{Jumio}).
+\item Research on LLM data set composition \& modular deep learning.
+}
+
+\entryL
+{Fellow}{2021}
+{\link{https://fiftyyears.com/}{PhD to VC, Fifty Years}}
+
+\listL
+{
+\item I sourced and performed due-diligence on pre-seed/seed deep-tech companies, \& helped source technical talent.
+}
+
+\entryL
+{Research Intern}{2020}
+{\link{https://techcrunch.com/2012/05/31/google-calls-its-smart-ad-relevance-system-smart-ass-yes-seriously/}{Google, Ad Predicted Click Through Rate Team}}
+
+\listL
+{
+\item Uncertainty estimation research for predicted click through rates.
+% \item Produced research pipeline for future search ad pCTR research.
+}
+
+\entryL
+{Research Intern}{2019}
+{\link{https://www.imagia.com}{Imagia Cybernetics}}
+
+\listL
+{
+\item Cancer localization methods (segmentation-free localization \& weak supervision from clinical notes) addressing scarcity of labelled data.
+%\item Contributed to the open-source \link{https://github.com/mlmed/torchxrayvision}{torchxrayvision} project.
+}
+
+\entryL
+{Research Methods Specialist}{2014--17}
+{\link{http://imaging-genetics.camh.ca/}{Kimel TIGRlab, Centre for Addiction and Mental Health}}
+
+\listL
+{
+\item Biomarkers for  vulnerable \link{https://www.sciencedirect.com/science/article/abs/pii/S0006322318314392}{schizophrenia} and \link{https://journals.plos.org/ploscompbiol/article?rev=2&id=10.1371/journal.pcbi.1006376}{Alzheimer's} patients.
+\item Designed, built, and managed (team of 5) a \link{https://github.com/TIGRLab/datman}{data management platform} 22-node compute cluster, and \link{https://github.com/TIGRLab/qcmon}{QA tools} used by team of 20.
+%\item Lead developer of production analysis code used by the scientists.
+%\item Technical training on computational methods.
+%\item Managed a 22-node compute cluster.
+%\item Contributed to 2 successfully funded grants \& 13 published papers.
+}
+
+%\entryL
+%{Data Analyst}{2013--14}
+%{\link{http://www.yorku.ca/grturner/cann-home.html}{CANN Lab, York University}}
+
+%\listL
+%{
+%\item Architect of a \link{https://github.com/josephdviviano/epitome}{platform for MRI pipeline development}.
+%\item Mentored graduate students in neuroimaging analysis approaches.
+%\item Developed biomarker of \link{https://www.sciencedirect.com/science/article/abs/pii/S0197458016300896}{reduced executive function in aging}.
+%}
+
+\end{minipage}
+% right column (SKILLS & EDUCATION)  % DO NOT REMOVE
+%\columnbreak                        % BLACK MAJIK @ WERK
+%\noindent\fcolorbox{white}{bg}{%    %
+% Right column.
+\begin{minipage}[t]{\dimexpr0.37\textwidth+2\fboxrule+2\fboxsep\relax}
+
+\headingsR{PROJECTS}
+
+%\entrysmR
+%{\link{https://github.com/josephdviviano/pyddsm}{PyDDSM}}{Data extraction tool for a mammography dataset.}
+
+\entrysmR
+{\link{https://github.com/GFNOrg/torchgfn}{TorchGFN}}{259 stars, 49 forks, 13 contributors. A modular, easy to extend GFlowNet library.  \link{https://arxiv.org/abs/2305.14594}{arXiv}.}
+
+%\entrysmR
+%{\link{https://github.com/josephdviviano/whatsinthebox}{What's In the Box?}}{Undesirable content identifier for the Common Crawl.}
+
+\entrysmR
+{\link{https://github.com/mlmed/torchxrayvision}{TorchXRayVision}}{995 stars, 227 forks, 11 contributors. Open source library for XRay datasets \& models. \link{https://proceedings.mlr.press/v172/cohen22a}{PMLR 2022}.}
+
+\headingsR{EDUCATION}
+
+\entryR
+{MSc. CS, Machine Learning}{2018--20}
+{\link{https://mila.quebec/}{Mila}, Universit\'e de Montr\'eal, Montr\'eal, QC}
+\infoR{Research on utility of saliency methods for \link{https://arxiv.org/abs/1910.00199}{diagnosing generalization failures} of deep learning models.}
+%\item Coursework on Reinforcement Learning, Deep Learning, NLP, \& CS Fundamentals.}
+
+\entryR
+{MSc. Bio, Neuroscience, Cum Laude}{2011--13}
+{\link{http://keith.psych.udel.edu/}{Schneider Lab}, York University, Toronto, ON}
+\infoR{Subcortial fMRI methods (\link{https://www.jneurosci.org/content/35/27/9836.short}{1}, \link{https://www.jneurosci.org/content/35/5/2026.short}{2}).}
+
+\entryR
+{BSc. Psychology,  Hons.}{2005--09}
+{Queen's University, Toronto, ON}
+
+%\listR{
+%\item Coursework in Psychology, Neuroscience, Statistics, and Philosophy.
+%}
+
+\headingsR{INVITED TALKS}
+
+\entryR
+{FACSS SciX Keynote Presentation}{2024}{Keynote presentation on AI for science.}
+
+\entryR
+{JGI Annual User Meeting}{2023}{Considerations for Machine Learning-Aided Lab in the Loop Scientific Discovery.}
+
+\headingsR{RESEARCH \& COMMUNITY}
+
+\listR{
+\item \textbf{Teaching}: Stats \& ML taught at \link{https://www.camh.ca/}{Center for Addiction and Mental Health} \& \link{https://x.com/main_community}{Montr\'eal AI \& Neuroscience Meeting, 2019}.  % \link{https://school.brainhackmtl.org/}{McGill BrainHack, 2019},
+\item \textbf{Paper Reviews}: \link{https://neurips.cc/}{NeurIPS}, \link{https://iclr.cc/}{ICLR}, \link{https://www.biologicalpsychiatryjournal.com/}{Biological Psychiatry}, \link{https://www.midl.io/}{MIDL}, \& \link{https://journals.plos.org/plosone/}{PLOS ONE}.  % \link{https://www.lmrl.org/}{ICLR Learning Meaningful Representations of Life Workshop, 2025}, \link{http://preregister.science/}{NeurIPS Pre-registration in ML Workshop, 2021},
+\item \textbf{Area Chair}: \link{https://neurips.cc/}{NeurIPS Datasets \& Benchmark Track, 2023--2024}
+}
+\vspace{-5mm}
+\headingsR{PUBLICATIONS}
+
+\entryR
+{\textit{* denotes first/last author.}}{h-index=20}
+{\vspace{-3mm}
+\listR{
+\item Action abstractions for amortized sampling, \textbf{ICLR} 2025.
+% \item torchgfn: A PyTorch GFlowNet library, 2023.
+% \item TorchXRayVision: A library of chest X-ray datasets and models, PMLR 2022.
+\item * What's in the Box? A Preliminary Analysis of Undesirable Content in the Common Crawl Corpus, \textbf{ACL} 2021.
+\item * Saliency is a Possible Red Herring When Diagnosing Poor Generalization, \textbf{ICLR} 2021.
+\item * Resting-state connectivity biomarkers of cognitive performance and social function in individuals with schizophrenia spectrum disorder and healthy control subjects, \textbf{Biological Psychiatry} 2018.
+% \item Alzheimer's Disease Neuroimaging Initiative Modeling and prediction of clinical symptom trajectories in Alzheimer's disease using longitudinal data, 2018. \\
+}
+}
+
+% \entryR
+% {}{}
+% {
+% }
+
+
+% \entrysmR
+% {R, C, Java, SQL, MATLAB}{Familiar}
+
+%\headingsR{TEACHING}
+
+%\entryR
+%{Introduction to Deep Learning}{2019}
+%{McGill BrainHack Summer School \& MAIN Conference Workshop}
+
+%\entryR
+%{Python for Neuroimaging}{2015}
+%{Centre for Addiction and Mental Health}
+
+%\headingsR{EXTRACURRICULAR}
+
+%\entryR
+%{Deep Learning Specialization}{2018}
+%{deeplearning.ai, Coursera}
+
+%\entryR
+%{Neural Networks for Machine Learning}{} % 2017
+%{Coursera}
+
+%\entryR
+%{Hadoop Platform \& Application Framework}{} % 2017
+%{Coursera}
+
+%\entryR%{Machine Learning}{} % 2016
+%{Coursera}
+
+%\entryR
+%{The Essentials of System Administration}{} % 2016
+%{The Linux Foundation}
+
+%\entryR
+%{Certified System Administrator}{2016}
+%{Linux Foundation}
+
+%\entryR
+%{High Performance Computing}{2014--16} % 2014-16
+%{SciNet, University of Toronto}
+
+%\entryR
+%{Intro to Data Science}{} % 2013
+%{Coursera}
+
+\end{minipage}
+
+\begin{center}
+\tiny{Compiled on \usdate\today.}
+\end{center}
+
+\end{document}
