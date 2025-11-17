@@ -7,7 +7,7 @@ title: "Deep Learning to Detect Early Cognitive Decline"
 date: 2018-01-11 13:32:20 +0300
 tags: [Publications]
 class: post-template
-subclass: 'post'
+subclass: "post"
 author: josephdviviano
 ---
 
@@ -25,7 +25,7 @@ The specific problem we wanted to tackle was the detection of the onset of cogni
 ![Identified Trajectories]({{site.baseurl}}/assets/images/trajectories/trajectories.png)
 {: refdef}
 
-Having defined our groups, we then calculated cortical thickness measures from the MRI scans. This measures the thickness of the grey matter across the cortical sheet of the brain: the thickness of the cortex at different regions of the cortex is [associated with differing densities of glial in those regions](https://www.pnas.org/content/110/4/1488), the [ability of the region to integrate signals to be set to other regions](https://www.cell.com/neuron/fulltext/S0896-6273(18)30956-5), is known to vary across individuals with different neurological disorders, and has high test-retest reliability due to the stability of the signal (unlike fMRI, which is much more susceptible to the patient's cognitive state and other sources of noise).
+Having defined our groups, we then calculated cortical thickness measures from the MRI scans. This measures the thickness of the grey matter across the cortical sheet of the brain: the thickness of the cortex at different regions of the cortex is [associated with differing densities of glial in those regions](https://www.pnas.org/content/110/4/1488), the [ability of the region to integrate signals to be set to other regions](<https://www.cell.com/neuron/fulltext/S0896-6273(18)30956-5>), is known to vary across individuals with different neurological disorders, and has high test-retest reliability due to the stability of the signal (unlike fMRI, which is much more susceptible to the patient's cognitive state and other sources of noise).
 
 {:refdef: style="text-align: center;"}
 ![Cortical Thickness]({{site.baseurl}}/assets/images/trajectories/thickness.png)

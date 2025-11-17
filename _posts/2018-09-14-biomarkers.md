@@ -7,9 +7,10 @@ title: "Redefining Psychiatric Treatment Using Machine Learning"
 date: 2018-09-14 13:32:20 +0300
 tags: [Publications]
 class: post-template
-subclass: 'post'
+subclass: "post"
 author: josephdviviano
 ---
+
 Machine learning can be used to find neurologically-distinct subtypes of Schizophrenia.
 
 A major issue with psychiatry is that individuals with the same diagnostic label from the [Diagnostic and Statistical Manual of Mental Disorders (DSM)](https://www.psychiatry.org/psychiatrists/practice/dsm) can actually have very different symptoms or deficits: it is common to count symptoms, and then give a diagnosis if the patient reaches passes a "symptom threshold" (this is an oversimplification, but suffices for illustration). You can imagine that using this scheme, two individuals with the exact same diagnosis might have very few overlapping, or in extreme cases, no overlapping symptoms. This is particularly true with one of the most heterogeneous disorders: Schizophrenia.
