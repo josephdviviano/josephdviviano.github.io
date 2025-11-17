@@ -6,7 +6,7 @@ subtitle: <a href='https://mila.quebec/en'>Mila Quebec AI Institute</a>. Humanis
 
 profile:
   align: right
-  image: jdv_profile.jpg
+  image: jdv_profile_smaller.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Joseph David Viviano</p>
@@ -18,8 +18,6 @@ news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
-
-**This page is under massive construction. I am not Einstein.**
 
 I believe the technology we need to address the most pressing issues humanity faces cannot be designed without AI first helping us understand the natural world. My main interests lie in the design of AI for Science systems, and leveraging them to enable breakthroughs in bioengineering.
 
