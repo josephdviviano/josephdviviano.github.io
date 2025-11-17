@@ -8,7 +8,7 @@ category: photography
 related_publications: true
 ---
 
-Here's a collection of shots I've taken around town. Ill periodicallty update these, but you can browse my Instagram if you want to see more.
+Here's a collection of shots I've taken around town. I'll periodicallty update these, but you can browse my Instagram if you want to see more.
 
 {% assign street_images = site.static_files
   | where_exp: "file", "file.path contains '/assets/img/photography/street/'"

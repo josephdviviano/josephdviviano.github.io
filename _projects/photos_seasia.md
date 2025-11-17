@@ -8,7 +8,7 @@ category: photography
 giscus_comments: true
 ---
 
-Scenes from wandering through Southeast Asia—markets, alleyways, temples, scooters, and sunsets, all shot on the fly.
+Some shots from my recent trip to Singapore for ICLR 2025, and a short tour of Cambodia's temples of Ankor Wat and the bustling streets of Bangkok.
 
 {% assign seasia_images = site.static_files
   | where_exp: "file", "file.path contains '/assets/img/photography/seasia/'"
