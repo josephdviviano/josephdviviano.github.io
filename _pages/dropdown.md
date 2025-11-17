@@ -1,7 +1,7 @@
 ---
 layout: page
 title: submenus
-nav: false
+nav: false  # to enable the dropdown menu, change to true
 nav_order: 8
 dropdown: true
 children:
