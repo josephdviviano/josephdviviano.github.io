@@ -6,7 +6,7 @@ repo_description_lines_max: 2
 github_repos:
   - gfnorg/torchgfn
   - mlmed/torchxrayvision
-  - josephdviviano/saliency-red-herring
-  - josephdviviano/whatsinthebox
+  - gfnorg/chunk-gfn
   - Bertinus/FLeCS
-  - josephdviviano/intro-dl
+  - orichardson/lir
+  - orichardson/pdg
