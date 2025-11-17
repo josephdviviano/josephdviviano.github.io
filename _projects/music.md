@@ -1,13 +1,13 @@
 ---
 layout: page
 title: Some Music
-description: Selected SoundCloud tracks from Mode Collapse
+description: Selected SoundCloud Tracks
 img: assets/img/photography/berlin/DSCF7466.jpg
 importance: 3
 category: music
 ---
 
-This page collects a handful of musical ideas I've been kicking around.
+This page collects a handful of musical ideas I've been kicking around. They're mostly demos, built from improvisations. I'm slowly working on some proper songs.
 
 <div class="soundcloud-embed mb-5">
   <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A877389109&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>

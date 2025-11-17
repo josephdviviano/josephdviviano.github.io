@@ -1,6 +1,6 @@
 ---
 layout: page
-title: project 2
+title: Southeast Asia
 description: Shots I recently took on a trip to Singapore, Thailand, and Cambodia.
 img: assets/img/photography/seasia/DSCF3163.RAF.jpg
 importance: 2

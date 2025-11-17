@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Street Photography
-description: with background image
+description: Strangers and Friends Around Town
 img: assets/img/photography/street/DSCF4255.jpg
 importance: 1
 category: photography
