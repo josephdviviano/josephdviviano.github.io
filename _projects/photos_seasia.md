@@ -5,7 +5,7 @@ description: Shots I recently took on a trip to Singapore, Thailand, and Cambodi
 img: assets/img/photography/seasia/DSCF3163.RAF.jpg
 importance: 2
 category: photography
-giscus_comments: true
+giscus_comments: false
 ---
 
 Some shots from my recent trip to Singapore for ICLR 2025, and a short tour of Cambodia's temples of Ankor Wat and the bustling streets of Bangkok.
