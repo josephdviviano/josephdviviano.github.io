@@ -27,6 +27,6 @@ I consider myself a strong generalist who loves science and has a knack for buil
 
 Long term, I'm most interested in use of AI to power new scientific breakthroughs, and particularly to discover new technologies to fight climate change, improve food security, and to power continued growth of the economy without compromising the sustainability of our planet.
 
-I'm also an amateur photographer and musician. Head over to the creative section to see some samples of my stuff. All photos on this site were taken by me!
+I'm also an amateur photographer and musician. Head over to the creative section to see some samples of my stuff.
 
 ![A Thunderstorm at Pic du Midi de Bigorre](../assets/img/blog-cover-sat.jpg){: width="100%" }
