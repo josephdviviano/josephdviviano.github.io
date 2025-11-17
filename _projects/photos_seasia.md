@@ -18,7 +18,8 @@ Some shots from my recent trip to Singapore for ICLR 2025, and a short tour of C
 <div class="row">
   {% for image in seasia_images %}
     <div class="col-12 col-md-6 mt-3">
-      {% include figure.liquid zoomable=true path=image.path class="img-fluid rounded z-depth-1" alt="Southeast Asia photograph {{ forloop.index }}" title=image.name %}
+      {% capture seasia_alt %}Southeast Asia photograph {{ forloop.index }}{% endcapture %}
+      {% include figure.liquid zoomable=true path=image.path class="img-fluid rounded z-depth-1" alt=seasia_alt title=image.name %}
     </div>
   {% endfor %}
 </div>

@@ -18,7 +18,8 @@ Here's a collection of shots I've taken around town. I'll periodicallty update t
 <div class="row">
   {% for image in street_images %}
     <div class="col-12 col-md-6 mt-3">
-      {% include figure.liquid zoomable=true path=image.path class="img-fluid rounded z-depth-1" alt="Street photograph {{ forloop.index }}" title=image.name %}
+      {% capture street_alt %}Street photograph {{ forloop.index }}{% endcapture %}
+      {% include figure.liquid zoomable=true path=image.path class="img-fluid rounded z-depth-1" alt=street_alt title=image.name %}
     </div>
   {% endfor %}
 </div>
