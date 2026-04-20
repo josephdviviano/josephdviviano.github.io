@@ -199,6 +199,14 @@ def export_forward(forward_model: nn.Module, out_path: Path):
         dynamic_axes={"state": {0: "batch"}, "policy": {0: "batch"}},
         opset_version=17,
     )
+    # The dynamo exporter splits weights into <name>.onnx.data by default.
+    # Inline everything so each model ships as a single self-contained file.
+    import onnx
+    model = onnx.load(out_path.as_posix())
+    onnx.save(model, out_path.as_posix(), save_as_external_data=False)
+    ext_path = out_path.with_suffix(".onnx.data")
+    if ext_path.exists():
+        ext_path.unlink()
     print(f"  -> {out_path.relative_to(Path.cwd())} ({out_path.stat().st_size:,} bytes)")
 
 
