@@ -1,3 +1,12 @@
+# /// script
+# requires-python = ">=3.10"
+# dependencies = [
+#     "torch>=2.2",
+#     "numpy",
+#     "onnx",
+#     "onnxscript",
+# ]
+# ///
 """
 Train the continuous GFlowNet forward policies for the Distill post at
 _posts/2026-04-20-gflownets-continuous.md. Exports each to ONNX so the
@@ -6,10 +15,12 @@ browser can sample from them via ONNX Runtime Web.
 Adapted from the self-contained example at the end of:
   https://github.com/GFNOrg/torchgfn/blob/master/tutorials/notebooks/intro_continuous.ipynb
 
-Run from the repo root:
-    python3 scripts/train_distill_gflownets.py
+Run with uv (creates an isolated environment on first run and caches it):
+    uv run scripts/train_distill_gflownets.py
 
-Requires: torch, numpy, onnx, onnxruntime (for verification).
+Dependencies are declared inline via PEP 723 metadata above; uv reads
+that block, materializes an ephemeral venv, installs the pinned deps,
+and runs the script. No requirements.txt or pyproject.toml needed.
 """
 
 from __future__ import annotations
