@@ -1,0 +1,77 @@
+/*******************************************************************************
+ * Styles for the interactive continuous-GFlowNet demos.
+ ******************************************************************************/
+
+.gfn-demo {
+  border: 1px solid var(--global-divider-color);
+  border-radius: 6px;
+  padding: 10px 12px 8px;
+  margin: 1.5em 0;
+  background: var(--global-card-bg-color);
+
+  canvas {
+    display: block;
+    width: 100%;
+  }
+
+  .gfn-top {
+    border-bottom: 1px dashed var(--global-divider-color);
+  }
+
+  .gfn-controls {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.85rem;
+    color: var(--global-text-color);
+  }
+
+  .gfn-temp-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+  }
+
+  .gfn-temp-slider {
+    accent-color: var(--global-theme-color);
+    width: 160px;
+    cursor: pointer;
+  }
+
+  .gfn-temp-val {
+    min-width: 3ch;
+    color: var(--global-theme-color);
+    font-weight: 600;
+  }
+
+  .gfn-sample-btn {
+    background: var(--global-theme-color);
+    color: var(--global-hover-text-color);
+    border: none;
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-family: inherit;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: opacity 0.15s;
+
+    &:hover:not(:disabled) {
+      background: var(--global-hover-color);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: wait;
+    }
+  }
+
+  .gfn-status {
+    color: var(--global-text-color-light);
+    font-size: 0.75rem;
+    margin-left: auto;
+  }
+}

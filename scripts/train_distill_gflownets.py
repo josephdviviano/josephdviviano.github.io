@@ -16,7 +16,7 @@ from __future__ import annotations
 
 import math
 import random
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from pathlib import Path
 
 import numpy as np
@@ -181,7 +181,7 @@ def export_forward(forward_model: nn.Module, out_path: Path):
     out_path.parent.mkdir(parents=True, exist_ok=True)
     torch.onnx.export(
         wrapper,
-        dummy,
+        (dummy,),
         out_path.as_posix(),
         input_names=["state"],
         output_names=["policy"],
