@@ -1,12 +1,14 @@
 // Has to be in the head tag, otherwise a flicker effect will occur.
 
-// Toggle through light, dark, and system theme settings.
+// Toggle through light, dark, cobalt2, and system theme settings.
 let toggleThemeSetting = () => {
   let themeSetting = determineThemeSetting();
   if (themeSetting == "system") {
     setThemeSetting("light");
   } else if (themeSetting == "light") {
     setThemeSetting("dark");
+  } else if (themeSetting == "dark") {
+    setThemeSetting("cobalt2");
   } else {
     setThemeSetting("system");
   }
@@ -25,29 +27,31 @@ let setThemeSetting = (themeSetting) => {
 let applyTheme = () => {
   let theme = determineComputedTheme();
 
+  let widgetTheme = themeFamily(theme);
+
   transTheme();
-  setHighlight(theme);
-  setGiscusTheme(theme);
-  setSearchTheme(theme);
+  setHighlight(widgetTheme);
+  setGiscusTheme(widgetTheme);
+  setSearchTheme(widgetTheme);
 
   // if mermaid is not defined, do nothing
   if (typeof mermaid !== "undefined") {
-    setMermaidTheme(theme);
+    setMermaidTheme(widgetTheme);
   }
 
   // if diff2html is not defined, do nothing
   if (typeof Diff2HtmlUI !== "undefined") {
-    setDiff2htmlTheme(theme);
+    setDiff2htmlTheme(widgetTheme);
   }
 
   // if echarts is not defined, do nothing
   if (typeof echarts !== "undefined") {
-    setEchartsTheme(theme);
+    setEchartsTheme(widgetTheme);
   }
 
   // if vegaEmbed is not defined, do nothing
   if (typeof vegaEmbed !== "undefined") {
-    setVegaLiteTheme(theme);
+    setVegaLiteTheme(widgetTheme);
   }
 
   document.documentElement.setAttribute("data-theme", theme);
@@ -55,7 +59,7 @@ let applyTheme = () => {
   // Add class to tables.
   let tables = document.getElementsByTagName("table");
   for (let i = 0; i < tables.length; i++) {
-    if (theme == "dark") {
+    if (widgetTheme == "dark") {
       tables[i].classList.add("table-dark");
     } else {
       tables[i].classList.remove("table-dark");
@@ -66,7 +70,7 @@ let applyTheme = () => {
   let jupyterNotebooks = document.getElementsByClassName("jupyter-notebook-iframe-container");
   for (let i = 0; i < jupyterNotebooks.length; i++) {
     let bodyElement = jupyterNotebooks[i].getElementsByTagName("iframe")[0].contentWindow.document.body;
-    if (theme == "dark") {
+    if (widgetTheme == "dark") {
       bodyElement.setAttribute("data-jp-theme-light", "false");
       bodyElement.setAttribute("data-jp-theme-name", "JupyterLab Dark");
     } else {
@@ -205,18 +209,18 @@ let transTheme = () => {
   }, 500);
 };
 
-// Determine the expected state of the theme toggle, which can be "dark", "light", or
-// "system". Default is "system".
+// Determine the expected state of the theme toggle, which can be "dark", "light",
+// "cobalt2", or "system". Default is "system".
 let determineThemeSetting = () => {
   let themeSetting = localStorage.getItem("theme");
-  if (themeSetting != "dark" && themeSetting != "light" && themeSetting != "system") {
+  if (themeSetting != "dark" && themeSetting != "light" && themeSetting != "cobalt2" && themeSetting != "system") {
     themeSetting = "system";
   }
   return themeSetting;
 };
 
-// Determine the computed theme, which can be "dark" or "light". If the theme setting is
-// "system", the computed theme is determined based on the user's system preference.
+// Determine the computed theme, which can be "dark", "light", or "cobalt2". If the theme
+// setting is "system", the computed theme is determined based on the user's system preference.
 let determineComputedTheme = () => {
   let themeSetting = determineThemeSetting();
   if (themeSetting == "system") {
@@ -230,6 +234,9 @@ let determineComputedTheme = () => {
     return themeSetting;
   }
 };
+
+// Map a computed theme to "dark" or "light" for third-party widgets that don't know about cobalt2.
+let themeFamily = (theme) => (theme == "light" ? "light" : "dark");
 
 let initTheme = () => {
   let themeSetting = determineThemeSetting();

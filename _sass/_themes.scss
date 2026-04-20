@@ -49,6 +49,10 @@
     display: none;
   }
 
+  #light-toggle-cobalt2 {
+    display: none;
+  }
+
   .repo-img-light {
     display: block;
   }
@@ -122,6 +126,10 @@ html[data-theme-setting="dark"] {
     display: none;
   }
 
+  #light-toggle-cobalt2 {
+    display: none;
+  }
+
   #back-to-top {
     color: var(--global-back-to-top-text-color);
     background: var(--global-back-to-top-bg-color);
@@ -141,5 +149,104 @@ html[data-theme-setting="light"] {
     padding-left: 10px;
     padding-top: 12px;
     display: block;
+  }
+
+  #light-toggle-cobalt2 {
+    display: none;
+  }
+}
+
+html[data-theme-setting="cobalt2"] {
+  #light-toggle-system {
+    display: none;
+  }
+
+  #light-toggle-dark {
+    display: none;
+  }
+
+  #light-toggle-light {
+    display: none;
+  }
+
+  #light-toggle-cobalt2 {
+    padding-left: 10px;
+    padding-top: 12px;
+    display: block;
+  }
+
+  #back-to-top {
+    color: var(--global-back-to-top-text-color);
+    background: var(--global-back-to-top-bg-color);
+  }
+}
+
+// Cobalt2 palette — based on Wes Bos's editor theme.
+$cobalt2-bg:        #193549;
+$cobalt2-bg-alt:    #15232d;
+$cobalt2-divider:   #0d3a58;
+$cobalt2-text:      #ffffff;
+$cobalt2-text-mute: #aac1d8;
+$cobalt2-yellow:    #ffc600;
+$cobalt2-orange:    #ff9d00;
+$cobalt2-pink:      #ff628c;
+$cobalt2-green:     #3ad900;
+$cobalt2-cyan:      #80ffbb;
+
+html[data-theme="cobalt2"] {
+  --global-bg-color: #{$cobalt2-bg};
+  --global-code-bg-color: #{$cobalt2-bg-alt};
+  --global-text-color: #{$cobalt2-text};
+  --global-text-color-light: #{$cobalt2-text-mute};
+  --global-theme-color: #{$cobalt2-yellow};
+  --global-hover-color: #{$cobalt2-orange};
+  --global-hover-text-color: #{$cobalt2-bg};
+  --global-footer-bg-color: #{$cobalt2-bg-alt};
+  --global-footer-text-color: #{$cobalt2-text-mute};
+  --global-footer-link-color: #{$cobalt2-yellow};
+  --global-distill-app-color: #{$cobalt2-text-mute};
+  --global-divider-color: #{$cobalt2-divider};
+  --global-card-bg-color: #{$cobalt2-bg-alt};
+  --global-highlight-color: #{$cobalt2-pink};
+  --global-back-to-top-bg-color: #{rgba($cobalt2-yellow, 0.6)};
+  --global-back-to-top-text-color: #{$cobalt2-bg};
+  --global-newsletter-bg-color: #{$cobalt2-bg-alt};
+  --global-newsletter-text-color: #{$cobalt2-text};
+
+  --global-tip-block: #{$cobalt2-cyan};
+  --global-tip-block-bg: #{rgba($cobalt2-cyan, 0.1)};
+  --global-tip-block-text: #{$cobalt2-cyan};
+  --global-tip-block-title: #{$cobalt2-green};
+  --global-warning-block: #{$cobalt2-yellow};
+  --global-warning-block-bg: #{rgba($cobalt2-yellow, 0.1)};
+  --global-warning-block-text: #{$cobalt2-yellow};
+  --global-warning-block-title: #{$cobalt2-orange};
+  --global-danger-block: #{$cobalt2-pink};
+  --global-danger-block-bg: #{rgba($cobalt2-pink, 0.1)};
+  --global-danger-block-text: #{$cobalt2-pink};
+  --global-danger-block-title: #{$cobalt2-pink};
+
+  .repo-img-light {
+    display: none;
+  }
+  .repo-img-dark {
+    display: block;
+  }
+
+  // Code block accents leaning into the Cobalt2 palette.
+  pre, code {
+    color: $cobalt2-yellow;
+  }
+  pre code .hljs-keyword,
+  pre code .hljs-selector-tag {
+    color: $cobalt2-orange;
+  }
+  pre code .hljs-string,
+  pre code .hljs-literal {
+    color: $cobalt2-green;
+  }
+  pre code .hljs-comment {
+    color: $cobalt2-text-mute;
+    font-style: italic;
   }
 }
