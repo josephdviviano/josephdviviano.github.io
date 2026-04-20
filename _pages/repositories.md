@@ -9,11 +9,8 @@ nav_order: 4
 
 ## Contribution Activity
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/josephdviviano/josephdviviano.github.io/output/github-snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/josephdviviano/josephdviviano.github.io/output/github-snake.svg">
-  <img alt="Snake eating my GitHub contribution graph" src="https://raw.githubusercontent.com/josephdviviano/josephdviviano.github.io/output/github-snake.svg" style="width: 100%;">
-</picture>
+<img class="repo-img-light w-100" alt="Snake eating my GitHub contribution graph" src="https://raw.githubusercontent.com/josephdviviano/josephdviviano.github.io/output/github-snake.svg">
+<img class="repo-img-dark w-100" alt="Snake eating my GitHub contribution graph" src="https://raw.githubusercontent.com/josephdviviano/josephdviviano.github.io/output/github-snake-dark.svg">
 
 ---
 
