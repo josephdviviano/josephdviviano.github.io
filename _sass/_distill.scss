@@ -19,6 +19,7 @@ d-article d-byline a {
 }
 
 d-article {
+  color: var(--global-text-color) !important;
   border-top-color: var(--global-divider-color) !important;
   p,
   h1,
@@ -28,7 +29,9 @@ d-article {
   h5,
   h6,
   li,
-  table {
+  table,
+  d-math,
+  blockquote {
     color: var(--global-text-color) !important;
   }
   h1,
