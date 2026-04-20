@@ -242,8 +242,33 @@ def add(a, b):
   let isCollapsed = false;
   let inputBuffer = [];
   let snapshots = { imgs: [], texts: [], codes: [] };
+  let pendingTimeouts = [];
 
   const sample = (arr) => arr[Math.floor(Math.random() * arr.length)];
+
+  function schedule(fn, delay) {
+    const id = setTimeout(() => {
+      const i = pendingTimeouts.indexOf(id);
+      if (i >= 0) pendingTimeouts.splice(i, 1);
+      fn();
+    }, delay);
+    pendingTimeouts.push(id);
+    return id;
+  }
+
+  function cancelAllPending() {
+    pendingTimeouts.forEach((id) => clearTimeout(id));
+    pendingTimeouts = [];
+  }
+
+  function shuffled(arr) {
+    const a = arr.slice();
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
 
   function genSlop(targetLen) {
     if (targetLen < 4) return targetLen > 0 ? "...".slice(0, targetLen) : "";
@@ -256,6 +281,28 @@ def add(a, b):
     return out.slice(0, targetLen).trimEnd();
   }
 
+  // Token-by-token bubble replacement. Flips words in random order, with
+  // variable per-word delay, so each text element "melts" asynchronously.
+  function bubbleText(node, targetStr) {
+    const origTokens = node.textContent.match(/\S+|\s+/g) || [];
+    const targetTokens = targetStr.match(/\S+|\s+/g) || [];
+    const n = Math.max(origTokens.length, targetTokens.length);
+    while (origTokens.length < n) origTokens.push("");
+    while (targetTokens.length < n) targetTokens.push("");
+
+    const flipOrder = shuffled(Array.from({ length: n }, (_, i) => i));
+    const current = origTokens.slice();
+
+    function step(k) {
+      if (k >= flipOrder.length) return;
+      current[flipOrder[k]] = targetTokens[flipOrder[k]];
+      node.textContent = current.join("");
+      schedule(() => step(k + 1), 20 + Math.random() * 180);
+    }
+
+    schedule(() => step(0), Math.random() * 900);
+  }
+
   function collapseImages() {
     document.querySelectorAll("img").forEach((img) => {
       if (img.closest("#mode-collapse-restore")) return;
@@ -265,18 +312,29 @@ def add(a, b):
         srcset: img.srcset,
         style: img.getAttribute("style") || "",
       });
-      img.removeAttribute("srcset");
-      if (img.parentElement && img.parentElement.tagName === "PICTURE") {
-        img.parentElement.querySelectorAll("source").forEach((s) => {
-          s.dataset._originalSrcset = s.srcset;
-          s.srcset = BLISS;
-        });
-      }
-      img.src = BLISS;
-      const hue = Math.floor((Math.random() - 0.5) * 80);
-      const contrast = (0.8 + Math.random() * 0.4).toFixed(2);
-      img.style.objectFit = "cover";
-      img.style.filter = `hue-rotate(${hue}deg) contrast(${contrast})`;
+
+      const delay = Math.random() * 2500;
+      schedule(() => {
+        const hue = Math.floor((Math.random() - 0.5) * 80);
+        const contrast = (0.8 + Math.random() * 0.4).toFixed(2);
+        const prevTransition = img.style.transition || "";
+        img.style.transition = "filter 400ms ease";
+        img.style.filter = "blur(14px) saturate(0.3)";
+
+        schedule(() => {
+          img.removeAttribute("srcset");
+          if (img.parentElement && img.parentElement.tagName === "PICTURE") {
+            img.parentElement.querySelectorAll("source").forEach((s) => {
+              s.dataset._originalSrcset = s.srcset;
+              s.srcset = BLISS;
+            });
+          }
+          img.src = BLISS;
+          img.style.objectFit = "cover";
+          img.style.filter = `hue-rotate(${hue}deg) contrast(${contrast})`;
+          schedule(() => { img.style.transition = prevTransition; }, 500);
+        }, 300);
+      }, delay);
     });
   }
 
@@ -285,13 +343,8 @@ def add(a, b):
       if (el.closest("#mode-collapse-restore")) return;
       snapshots.codes.push({ el, html: el.innerHTML });
       const isInline = el.tagName === "CODE" && !el.closest("pre");
-      if (isInline) {
-        el.textContent = sample(INLINE_CODE_SLOP);
-      } else if (el.tagName === "PRE") {
-        el.textContent = sample(CODE_SLOP);
-      } else {
-        el.textContent = sample(CODE_SLOP);
-      }
+      const target = isInline ? sample(INLINE_CODE_SLOP) : sample(CODE_SLOP);
+      bubbleText(el, target);
     });
   }
 
@@ -324,36 +377,50 @@ def add(a, b):
         },
       },
     );
+
     const nodes = [];
     let n;
     while ((n = walker.nextNode())) nodes.push(n);
+
     nodes.forEach((node) => {
-      snapshots.texts.push({ node, original: node.textContent });
       const original = node.textContent;
+      snapshots.texts.push({ node, original });
+
       const parent = node.parentElement;
       const parentTag = parent ? parent.tagName : "";
       const isNav = parent && parent.closest("nav, .navbar, .nav-link");
+
+      let target;
       if (isNav && original.trim().length < 25) {
-        node.textContent = sample(NAV_SLOP);
+        target = sample(NAV_SLOP);
       } else if (/^H[1-6]$/.test(parentTag)) {
-        const phrase = sample(["Cookie Policy", "Privacy Policy", "All Rights Reserved", "Terms of Service"]);
-        node.textContent = (phrase + " ").repeat(Math.max(1, Math.ceil(original.length / (phrase.length + 1)))).trimEnd();
+        const phrase = sample([
+          "Cookie Policy",
+          "Privacy Policy",
+          "All Rights Reserved",
+          "Terms of Service",
+        ]);
+        const reps = Math.max(1, Math.ceil(original.length / (phrase.length + 1)));
+        target = (phrase + " ").repeat(reps).trimEnd();
       } else {
-        node.textContent = genSlop(original.length);
+        target = genSlop(original.length);
       }
+
+      bubbleText(node, target);
     });
   }
 
   function collapse() {
     if (isCollapsed) return;
+    isCollapsed = true;
     collapseImages();
     collapseCode();
     collapseText();
     showRestoreButton();
-    isCollapsed = true;
   }
 
   function restore() {
+    cancelAllPending();
     snapshots.imgs.forEach((s) => {
       s.el.src = s.src;
       if (s.srcset) s.el.srcset = s.srcset;
