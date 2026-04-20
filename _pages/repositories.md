@@ -45,27 +45,7 @@ nav_order: 4
 {% endif %}
 {% endif %}
 
-## Activity Graph
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=josephdviviano&theme=github-compact&hide_border=true&bg_color=00000000&color=ffffff&line=ffc600&point=ff9d00">
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=josephdviviano&theme=github-light&hide_border=true">
-  <img alt="GitHub activity graph" src="https://github-readme-activity-graph.vercel.app/graph?username=josephdviviano&theme=github-light&hide_border=true" style="width: 100%;">
-</picture>
-
----
-
 {% if site.data.repositories.github_repos %}
-
-## Star History
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=mlmed/torchxrayvision,gfnorg/torchgfn,gfnorg/chunk-gfn&type=Date&theme=dark">
-  <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=mlmed/torchxrayvision,gfnorg/torchgfn,gfnorg/chunk-gfn&type=Date">
-  <img alt="Star history of selected repositories" src="https://api.star-history.com/svg?repos=mlmed/torchxrayvision,gfnorg/torchgfn,gfnorg/chunk-gfn&type=Date" style="width: 100%;">
-</picture>
-
----
 
 ## GitHub Repositories
 
