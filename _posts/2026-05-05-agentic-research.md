@@ -46,7 +46,7 @@ Research codebases have unique requirements compared to other kinds of software.
 + Be correct - tests, docs, comments, code, and the paper itself must match precisely.
 + **Work in a way you fully understand**.
 
-Your codebase need not:
+Your codebase need not be:
 
 + Production grade.
 + Full of complex abstractions geared towards maintainability or extensibility over a long lifespan.
