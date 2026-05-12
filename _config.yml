@@ -32,9 +32,17 @@ back_to_top: true # set to false to disable the back to top button
 repo_theme_light: default # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
 repo_theme_dark: dark # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
 repo_trophies:
-  enabled: false # disabled: github-profile-trophy.vercel.app is down (see TODO.md)
+  enabled: false # re-enable after self-hosted github-profile-trophy is deployed (see TODO.md)
   theme_light: flat # https://github.com/ryo-ma/github-profile-trophy
   theme_dark: gitdimmed # https://github.com/ryo-ma/github-profile-trophy
+
+# External service URLs for repository page.
+# The public Vercel instances of these services are unreliable (frequent
+# DEPLOYMENT_PAUSED), so we self-host. Replace these placeholders with your
+# own Vercel deployment URLs (no trailing slash). See TODO.md.
+external_services:
+  github_readme_stats_url: https://github-readme-stats-fast-joseph-1708s-projects.vercel.app
+  github_profile_trophy_url: https://CHANGE-ME-profile-trophy.vercel.app
 
 # -----------------------------------------------------------------------------
 # RSS Feed
