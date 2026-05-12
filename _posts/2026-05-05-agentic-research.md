@@ -208,7 +208,7 @@ Agents also benefit from linting, typing, docstrings, and assertions to verify t
 
 ### Tooling, Safety, and Environment
 
-Don't trust your AI, they’re mostly correct but have no regrets when making irreversable mistakes, which can often happen when agents are working in parallel and each is not aware of the other's work.
+Don't trust your AI, they’re mostly correct but have no regrets when making irreversible mistakes, which can often happen when agents are working in parallel and each is not aware of the other's work.
 
 For sensitive tasks like database migrations or large filesystem manipulations, have your agent output a script you can verify and run by hand instead of trusting the full work to the agent directly. You can cross-reference this script with another agent as a sanity check as well. Things that exist only in the agent’s working memory are subject to mutation, things written on disk are static - leverage this.
 
@@ -283,7 +283,7 @@ The kinds of roles I tend to ask for in one off prompts mostly include:
 2. Test designer (best if done before the functionality is written and the agent is provided with clear requirements).
 3. Evaluator of the code's intention vs the various docs we have written.
 4. Comparison of the codebase against external references.
-5. Data flow analysis to identify parallel pathways for data flow, and to identify refactoring opportunities to improve extensibility toward a long-term roadmap goal, or simplification of an cxovercomplex implementation.
+5. Data flow analysis to identify parallel pathways for data flow, and to identify refactoring opportunities to improve extensibility toward a long-term roadmap goal, or implementation simplification.
 6. Research: evaluating the literature, or finding discrepancies in the implementation vs. the docs, or subtle changes between two implementations.
 
 [File Structure as Memory](https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus) uses skills to keep the core `agent.md` file small with only universal rules, and pointers to various `skills.md` required for specific tasks. Since agents often only need to do one of these things at a time, context is better scoped this way. For example, asking the agent to implement something points agents to `guidelines/coding.md`, and asking the agent to draft a methods section points it to `guidelines/latex.md`.
@@ -319,7 +319,7 @@ This section is primarily for graduate students and others who do not have expen
 
 Many research codebases are relatively small, and might not be the best place to practice the finer points of how to effectively wrangle agents. If want to practice the craft and develop your intuition, I suggest building a 3D game engine. There are many open source game engines out there (e.g., [godot](https://github.com/godotengine/godot) or [o3de](https://o3de.org/)) you can use as a reference, and these engines typically require substantially more code to be written than research libraries. Pick your favorite older game and try to re-create a working prototype or playable level. It's addictive and will stress your ability to write specific specs, manage context, and come up with clever verification strategies beyond simple tests, because sufficiently sophisticated games are actually quite hard to test and the agent will often incorrectly state they've solved a problem when things are wildly wrong. This will sharpen your ability to describe requirements to the system with a tight, interactive feedback loop.
 
-Game engines share some similarities with research from a development perspective. Getting the desired behaviour out of what is effectively a physics simulator with game logic bolted on requires a precise description of behaviour that might not be easy to explicitly encode in a test - instead, you will likely playtest the engine to view the results of your recent changes. It also is an amazingly creative endevour, which opens up a lot of opportunities for experimentation and design.
+Game engines share some similarities with research from a development perspective. Getting the desired behaviour out of what is effectively a physics simulator with game logic bolted on requires a precise description of behaviour that might not be easy to explicitly encode in a test - instead, you will likely playtest the engine to view the results of your recent changes. It also is an amazingly creative endeavour, which opens up a lot of opportunities for experimentation and design.
 
 This is my project: a modernization of an [old favorite of mine](https://youtu.be/0shd5deF3es?t=644). It has taught me a lot about effective workflows with codebases easily 10x more complex than what I work with on a typical research project. I'm far from done, but this is an example of the sort of thing I could never have dreamed of pursuing alongside my career before agents.
 
