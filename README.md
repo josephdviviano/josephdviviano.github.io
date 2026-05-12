@@ -94,17 +94,11 @@ A non-exhaustive list of changes from stock
 
 ### Content and layout
 
-- Custom distill posts:
-  - [Continuous GFlowNets, in your browser](_posts/2026-04-20-gflownets-continuous.md)
-  - [Agentic Research Best Practices](_posts/2026-05-05-agentic-research.md)
 - `.image-map` / `a.hot` helper for clickable overlay regions on figures
-  (used to link parts of the workflow diagram to the relevant section).
 - `_includes/video.liquid` fixed: emits a proper `<video></video>` closing
   tag and adds `playsinline` so iOS Safari will autoplay inline.
 - Bundled trained GFlowNet ONNX policies for the GFlowNets post's
   in-browser inference demo.
-- Tag set reduced to `agents` and `gflownets` (extend in `_config.yml` →
-  `display_tags` as more tags are introduced).
 
 ### Infrastructure
 
@@ -114,11 +108,6 @@ A non-exhaustive list of changes from stock
 - Disabled the broken github-profile-trophy widget.
 - Scripts under [`scripts/`](scripts/) declare deps inline via
   [PEP 723](https://peps.python.org/pep-0723/) and use `uv` for execution.
-
-### Easter egg
-
-- Konami code triggers a word-by-word "mode collapse" bubble effect with
-  variable lag.
 
 ### Removed from upstream
 
