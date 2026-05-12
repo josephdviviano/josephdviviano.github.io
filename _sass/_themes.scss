@@ -250,3 +250,15 @@ html[data-theme="cobalt2"] {
     font-style: italic;
   }
 }
+
+// Opt-in: tag a figure with class="invert-on-dark" and it will be
+// auto-inverted under the dark and cobalt2 themes. hue-rotate(180deg)
+// keeps colored elements recognizable; pure black/white diagrams are
+// unaffected by it.
+html[data-theme="dark"],
+html[data-theme="cobalt2"] {
+  img.invert-on-dark,
+  .invert-on-dark img {
+    filter: invert(1) hue-rotate(180deg);
+  }
+}

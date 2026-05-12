@@ -3,12 +3,13 @@ layout: distill
 title: Continuous GFlowNets, in your browser
 description: An interactive tour of sampling a continuous mixture distribution with Trajectory Balance — the pedagogical bug, mode collapse, and the off-policy fix.
 date: 2026-04-20
+tags: [gflownets]
 published: true
 authors:
   - name: Joseph Viviano
     url: https://viviano.ca
     affiliations:
-      name: Independent
+      name: Mila - Québec Artificial Intelligence Institute
 bibliography: 2026-04-20-gflownets-continuous.bib
 toc:
   - name: The setup

@@ -189,6 +189,44 @@ ul.task-list input[type="checkbox"] {
   text-align: center;
 }
 
+// Image-overlay link map. Wrap an <img> in .image-map and add child
+// <a class="hot"> with inline style="left:%;top:%;width:%;height:%"
+// for each clickable region. Add the .debug class while tuning to
+// visualize the regions; remove it for production.
+.image-map {
+  position: relative;
+  display: block;
+
+  > img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  > a.hot {
+    position: absolute;
+    display: block;
+    border: none !important;
+    border-radius: 4px;
+    text-decoration: none !important;
+    transition: background-color 120ms ease;
+
+    &:hover,
+    &:focus-visible {
+      border: none !important;
+      text-decoration: none !important;
+      background-color: rgba(var(--global-theme-color-rgb, 154, 71, 154), 0.18);
+      outline: 2px solid var(--global-theme-color);
+      outline-offset: -2px;
+    }
+  }
+
+  &.debug > a.hot {
+    background-color: rgba(255, 198, 0, 0.18);
+    outline: 1px dashed rgba(0, 0, 0, 0.6);
+  }
+}
+
 // Card
 
 .card {

@@ -13,7 +13,7 @@ footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
   Photos by me.
-  The Konami code is FORBIDDEN on this site.
+  This is a sacred place, the Konami code is forbidden here.
 keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: favicon_io/favicon.ico # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
@@ -313,7 +313,7 @@ jekyll-archives:
     tag: "/blog/tag/:name/"
     category: "/blog/category/:name/"
 
-display_tags: ["machine learning", "ai for science", "papers", "musings", "programming", "biology", "neuro"] # these tags will be displayed on the front page of your blog
+display_tags: ["agents", "gflownets"] # these tags will be displayed on the front page of your blog
 display_categories: [] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
