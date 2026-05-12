@@ -321,6 +321,6 @@ Many research codebases are relatively small, and might not be the best place to
 
 Game engines share some similarities with research from a development perspective. Getting the desired behaviour out of what is effectively a physics simulator with game logic bolted on requires a precise description of behaviour that might not be easy to explicitly encode in a test - instead, you will likely playtest the engine to view the results of your recent changes. It also is an amazingly creative endeavour, which opens up a lot of opportunities for experimentation and design.
 
-This is my project: a modernization of an [old favorite of mine](https://youtu.be/0shd5deF3es?t=644). It has taught me a lot about effective workflows with codebases easily 10x more complex than what I work with on a typical research project. I'm far from done, but this is an example of the sort of thing I could never have dreamed of pursuing alongside my career before agents.
+This is my project: a modernization of an [old favourite of mine](https://youtu.be/0shd5deF3es?t=644). It has taught me a lot about effective workflows with codebases easily 10x more complex than what I work with on a typical research project. I'm far from done, but this is an example of the sort of thing I could never have dreamed of pursuing alongside my career before agents.
 
 {% include video.liquid path="assets/video/darkness.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true loop=true muted=true width="100%" %}
