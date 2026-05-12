@@ -296,7 +296,7 @@ The superhuman speed of code generation makes it easy to get overloaded and stop
 
    1. Define the exact regions to manipulate, and ask the model to generate only the relevant code.
    2. Name the existing pieces it should leverage: "I want to build feature A — please use X, Y, Z to accomplish it, and ensure it passes these tests."
-   3. When one-shot success is unlikely, plan the work as two passes — a rough build, then a refactor ([plan to throw one away](https://course.ccs.neu.edu/cs5500f14/Notes/Prototyping1/planToThrowOneAway.html)). Often easier than getting it right in one go.
+   3. When one-shot success is unlikely, plan the work as two passes — a rough build, then a refactor ([plan to throw one away](https://en.wikipedia.org/wiki/The_Mythical_Man-Month)). Often easier than getting it right in one go.
    {:type="a"}
 
 
