@@ -2,6 +2,7 @@
 layout: default
 permalink: /blog/
 title: blog
+description: Notes on GFlowNets, agentic research, machine learning, and building tools for AI-driven science.
 nav: true
 nav_order: 1
 pagination:
