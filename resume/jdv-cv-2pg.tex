@@ -1,3 +1,4 @@
+% !TEX program = xelatex
 % Pedigree fools fools.
 \documentclass[a4paper,11pt,oneside]{book}
 \usepackage[top=0.65in, bottom=0.65in, left=1in, right=1in]{geometry} % margins
@@ -111,6 +112,25 @@
     \begin{itemize}[leftmargin=-1.5cm,itemsep=0.8mm]#4\end{itemize}\vspace{0.8\parsep}%
   }}
 
+% As \entry, but #4 is plain prose rather than \item bullets. The \item[]
+% supplies the (empty) label the list needs, so no "missing \item" error.
+\newcommand{\entrytext}[4]{%
+  \parbox[t]{2.5cm}{#1\hfill}\hspace{0cm}\parbox[t]{11.8cm}{%
+    \textbf{#2}%
+    \hfill%
+    {\footnotesize\addfontfeature{Color=lightgray} #3}\
+    \vspace{1.2mm}
+    \begin{itemize}[leftmargin=-1.5cm,itemsep=0.8mm]\item[]#4\end{itemize}\vspace{0.8\parsep}%
+  }}
+
+% Headline-only entry: no body, so no list at all.
+\newcommand{\entryhead}[3]{%
+  \parbox[t]{2.5cm}{#1\hfill}\hspace{0cm}\parbox[t]{11.8cm}{%
+    \textbf{#2}%
+    \hfill%
+    {\footnotesize\addfontfeature{Color=lightgray} #3}%
+  }\par\vspace{1.2mm}}
+
 \renewcommand{\bfseries}{\headingfont\color{headercolor}}
 \newcommand{\skills}[2]{%
   \parbox[t]{3cm}{\hfill#1&}\hspace{1cm}\parbox[t]{10.65cm}{%
@@ -151,7 +171,7 @@
 
     joseph@viviano.ca\ | \link{https://www.viviano.ca}{viviano.ca}\\
     \link{https://scholar.google.com/citations?user=Jd7wEJ8AAAAJ&hl=en}{GScholar} \\
-    \link{https://twitter.com/josephdviviano}{twitter.com/josephdviviano}\\
+    \link{https://x.com/josephdviviano}{x.com/josephdviviano}\\
     \link{https://www.github.com/josephdviviano}{github.com/josephdviviano}%\\ %Deep Genomics, 6666 Rue Saint Urbain, Montr\'eal
 
 \end{minipage}
@@ -163,9 +183,16 @@
 \sectionheading{EDUCATION}
 
 \entry
+{2026--}
+{PhD, Computer Science (incoming)}
+{\link{https://mila.quebec/}{Mila}, Universit\'e de Montr\'eal, QC/CA.}
+{\item Supervised by \link{https://pierrelucbacon.com/}{Dr. Pierre Luc Bacon} \newline Topic: Sample Efficient RL for High Dimensional Search. \newline
+Funded by the NSERC Canada Graduate Scholarship \textendash{} Doctoral.} \\\
+
+\entry
 {2018--2020}
 {MSc., Computer Science}
-{Universit\'e de Montr\'eal, QC/CA.}
+{\link{https://mila.quebec/}{Mila}, Universit\'e de Montr\'eal, QC/CA.}
 {\item Internship Supervised by \link{https://yoshuabengio.org/}{Dr. Yoshua Bengio} \newline
 `Methods for controlling and utilizing saliency maps in medical imaging'.} \\\
 
@@ -176,11 +203,10 @@
 {\item Thesis Supervised by \link{https://www.linkedin.com/in/keith0/}{Dr. Keith Schneider} \newline
 `Tremotopic mapping of the human thalamic reticular nucleus'.}\\\
 
-\entry
+\entryhead
 {2005--2009}
-{BSc. Hons., Psychology.}
+{BSc. Hons., Psychology}
 {Queen's University, ON/CA.}
-{}
 %{\item Coursework in Biology, Psychology, Statistics, and Philosophy.} \\\
 
 
@@ -188,11 +214,11 @@
 \sectionheading{PROFESSIONAL EXPERIENCE}
 
 \entry
-{2023--Now}
+{2022--Now}
 {ML Scientist}
 {Mila Qu\'ebec AI Institute, QC/CA.}
 {
-    \item Lead developer of \link{https://github.com/gfnorg/torchgfn}{torchgfn} GFlowNet library (290 stars, 49 forks, 15 contributors).
+    \item Lead developer of \link{https://github.com/gfnorg/torchgfn}{torchgfn} GFlowNet library (312 stars, 56 forks, 20 contributors).
     \item GFlowNet application collaborations: Antibody design (\link{https://www.amgen.com/}{Amgen}), distributed search scaling (\link{https://www.intel.com/content/www/us/en/homepage.html}{Intel}).
     \item Lab engineering support for ML for Science projects. % and scientific content coordination.
     \item Grant writing: Mila's compute infrastructure, AI for Metabolic Engineering with \link{https://www.jbei.org/}{Joint BioEnergy Institute}.
@@ -291,36 +317,51 @@
 %{Other Languages}{R, MATLAB, Java, C, SQL.} \\\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sectionheading{AWARDS}
+
+\entrytext
+{2026}
+{Canada Graduate Scholarships \textendash{} Doctoral}
+{NSERC.}
+{Canada's most competitive graduate scholarship. \$40,000/year for 3 years.}
+
+\entrytext
+{2026}
+{Gold Reviewer Award}
+{\link{https://icml.cc/}{ICML} Position Paper Track.}
+{Awarded to the top-rated reviewers of the track.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \sectionheading{COMMUNITY SERVICE}
 
-\entry
-{2023-2025}
+\entrytext
+{2023--Now}
 {Area Chair}
-{Meta Reviewing}
+{Meta Reviewing.}
 {Paper Adjudication for \link{https://neurips.cc/virtual/2023}{NeurIPS Datasets and Benchmarks Track}.}
 
 % \entry
 % {2023}
 % {Grant Reviewing}
-% {Health Data Nexus Dataset Grants}
+% {Health Data Nexus Dataset Grants.}
 % {Reviewed 5 Proposals on the Collection of Healthcare-focused ML-ready datasets.}
 
-\entry
-{2014-2023}
+\entrytext
+{2014--Now}
 {Reviewing}
-{Paper reviews for conferences and journals}
+{Paper reviews for conferences and journals.}
 {Reviews for \link{https://iclr.cc/}{ICLR}, \link{http://preregister.science/}{NeurIPS Pre-registration in ML Workshop}, \link{https://www.biologicalpsychiatryjournal.com/}{Biological Psychiatry}, \link{https://www.midl.io/}{MIDL}, \link{https://www.pnas.org/}{PNAS}, \& \link{https://journals.plos.org/plosone/}{PLOS ONE}.}
 
 %\entry
 %{2019}
 %{Instruction}
-%{Deep Learning for Neuroscientists}
+%{Deep Learning for Neuroscientists.}
 %{A 1.5-3 hour course on the fundementals of deep learning for a non-CS audiance given at \link{http://www.crm.umontreal.ca/2019/MAIN2019/index_e.php}{MAIN 2019} and \link{https://brainhackmtl.github.io/global2019/}{Brainhack 2019}.}
 
 %\entry
 %{2015--2016}
 %{Instructor}
-%{Python for MRI Data Analysis}
+%{Python for MRI Data Analysis.}
 %{Designed and taught course on MRI data analysis using Numpy.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -332,7 +373,7 @@
 
 \paper{Bertin P, \textcolor{highlight}{Viviano JD}, Tejada-Lapuerta A, Wang W, Bauer S, Theis FJ, Bengio Y. A scalable gene network model of regulatory dynamics in single cells. arXiv, 2025.}
 
-\paper{Delaunay P, Bouthillier X, Breuleux O, Ortiz-Gagné S, Bilaniuk O, Normandin F, Bergeron A, Carrez B, Alain G, Blanc S, \textcolor{highlight}{Viviano JD}, et al. Introducing Milabench: Benchmarking Accelerators for AI. arXiv, 2024.}
+\paper{Delaunay P, Bouthillier X, Breuleux O, Ortiz-Gagné S, Bilaniuk O, Normandin F, Bergeron A, Carrez B, Alain G, Blanc S, Osterrath F, \textcolor{highlight}{Viviano JD}, et al. Introducing Milabench: Benchmarking Accelerators for AI. arXiv, 2024.}
 
 \paper{Cohen JP, \textcolor{highlight}{Viviano JD}, Bertin P, Morrison P, Torabian P, Guarrera M, Lungren MP, Chaudhari A, Brooks R, Hashir M, Bertrand H. TorchXRayVision: A library of chest X-ray datasets and models. Medical Imaging with Deep Learning (MIDL), 2022.}
 
@@ -388,28 +429,28 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \sectionheading{INVITED TALKS}
-\entry
+\entrytext
 {2024}
 {Keynote Speaker}
-{FACSS SciX}
+{FACSS SciX.}
 {Can an AI Understand a Scientist?}
 
 % \entry
 % {2024}
 % {Invited Speaker}
-% {Faculty of Pharmacy, University of Montreal}
+% {Faculty of Pharmacy, University of Montreal.}
 % {Machine Learning for Drug Discovery and Development}
 
-\entry
+\entrytext
 {2023}
-{}
-{Joint Genome Institute Annual User Meeting}
+{Invited Speaker}
+{Joint Genome Institute Annual User Meeting.}
 {\textcolor{highlight}{Viviano JD}. Considerations for Machine Learning-Aided Lab in the Loop Scientific Discovery.}
 
 %\entry
 %{2015}
 %{}
-%{Human Brain Mapping Data Workshop}
+%{Human Brain Mapping Data Workshop.}
 %{\textcolor{highlight}{Viviano JD}, Chavez S, Pipitone JC, Voineskos AN. Tracking the quality of ongoing acquisitions.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -112,6 +112,25 @@
     \begin{itemize}[leftmargin=-1.5cm,itemsep=0.8mm]#4\end{itemize}\vspace{0.8\parsep}%
   }}
 
+% As \entry, but #4 is plain prose rather than \item bullets. The \item[]
+% supplies the (empty) label the list needs, so no "missing \item" error.
+\newcommand{\entrytext}[4]{%
+  \parbox[t]{2.5cm}{#1\hfill}\hspace{0cm}\parbox[t]{11.8cm}{%
+    \textbf{#2}%
+    \hfill%
+    {\footnotesize\addfontfeature{Color=lightgray} #3}\
+    \vspace{1.2mm}
+    \begin{itemize}[leftmargin=-1.5cm,itemsep=0.8mm]\item[]#4\end{itemize}\vspace{0.8\parsep}%
+  }}
+
+% Headline-only entry: no body, so no list at all.
+\newcommand{\entryhead}[3]{%
+  \parbox[t]{2.5cm}{#1\hfill}\hspace{0cm}\parbox[t]{11.8cm}{%
+    \textbf{#2}%
+    \hfill%
+    {\footnotesize\addfontfeature{Color=lightgray} #3}%
+  }\par\vspace{1.2mm}}
+
 \renewcommand{\bfseries}{\headingfont\color{headercolor}}
 \newcommand{\skills}[2]{%
   \parbox[t]{3cm}{\hfill#1&}\hspace{1cm}\parbox[t]{10.65cm}{%
@@ -164,9 +183,16 @@
 \sectionheading{EDUCATION}
 
 \entry
+{2026--}
+{PhD, Computer Science (incoming)}
+{\link{https://mila.quebec/}{Mila}, Universit\'e de Montr\'eal, QC/CA.}
+{\item Supervised by \link{https://pierrelucbacon.com/}{Dr. Pierre Luc Bacon} \newline Topic: Sample Efficient RL for High Dimensional Search. \newline
+Funded by the NSERC Canada Graduate Scholarship \textendash{} Doctoral.} \\\
+
+\entry
 {2018--2020}
 {MSc., Computer Science}
-{Universit\'e de Montr\'eal, QC/CA.}
+{\link{https://mila.quebec/}{Mila}, Universit\'e de Montr\'eal, QC/CA.}
 {\item Internship Supervised by \link{https://yoshuabengio.org/}{Dr. Yoshua Bengio} \newline
 `Methods for controlling and utilizing saliency maps in medical imaging'.} \\\
 
@@ -179,7 +205,7 @@
 
 \entry
 {2005--2009}
-{BSc. Hons., Psychology.}
+{BSc. Hons., Psychology}
 {Queen's University, ON/CA.}
 {\item Coursework in Biology, Psychology, Statistics, and Philosophy.} \\\
 
@@ -188,7 +214,7 @@
 \sectionheading{PROFESSIONAL EXPERIENCE}
 
 \entry
-{2023--Now}
+{2022--Now}
 {ML Scientist}
 {Yoshua Bengio's Group, \link{https://mila.quebec/}{Mila Qu\'ebec AI Institute}, QC/CA.}
 {
@@ -212,7 +238,7 @@
 
 \entry
 {2021--2025}
-{Scientific Mentor}
+{Scientific Mentor (Volunteer)}
 {\link{https://creativedestructionlab.com/streams/ai/cdl-montreal-artificial-intelligence/}{Creative Destruction Lab Montr\'eal}, QC/CA.}
 {
     \item Performed technical assessments of startups and provided feedback for a business and investor focused audience.
@@ -276,37 +302,43 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \sectionheading{AWARDS}
 
-\entry
+\entrytext
 {2026}
 {Canada Graduate Scholarships – Doctoral}
-{NSERC}
-{Canada's most competitive graduate scholarship, \$40,000/year for 3 years.}
+{NSERC.}
+{Canada's most competitive graduate scholarship. \$40,000/year for 3 years.}
+
+\entrytext
+{2026}
+{Gold Reviewer Award}
+{\link{https://icml.cc/}{ICML} Position Paper Track.}
+{Awarded to the top-rated reviewers of the track.}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \sectionheading{INVITED TALKS}
-\entry
+\entrytext
 {2024}
 {Keynote Speaker}
-{FACSS SciX}
+{FACSS SciX.}
 {Can an AI Understand a Scientist?}
 
-\entry
+\entrytext
 {2024}
 {Invited Speaker}
-{Faculty of Pharmacy, University of Montreal}
+{Faculty of Pharmacy, University of Montreal.}
 {Machine Learning for Drug Discovery and Development.}
 
-\entry
+\entrytext
 {2023}
 {Invited Speaker}
-{Joint Genome Institute Annual User Meeting}
+{Joint Genome Institute Annual User Meeting.}
 {\textcolor{highlight}{Viviano JD}. Considerations for Machine Learning-Aided Lab in the Loop Scientific Discovery.}
 
-\entry
+\entrytext
 {2015}
 {Invited Speaker}
-{Human Brain Mapping Data Workshop}
+{Human Brain Mapping Data Workshop.}
 {\textcolor{highlight}{Viviano JD}, Chavez S, Pipitone JC, Voineskos AN. Tracking the quality of ongoing acquisitions.}
 
 
@@ -323,7 +355,7 @@
 
 \paper{Bertin P, \textcolor{highlight}{Viviano JD}, Tejada-Lapuerta A, Wang W, Bauer S, Theis FJ, Bengio Y. A scalable gene network model of regulatory dynamics in single cells. arXiv, 2025.}
 
-\paper{Delaunay P, Bouthillier X, Breuleux O, Ortiz-Gagné S, Bilaniuk O, Normandin F, Bergeron A, Carrez B, Alain G, Blanc S, \textcolor{highlight}{Viviano JD}, et al. Introducing Milabench: Benchmarking Accelerators for AI. arXiv, 2024.}
+\paper{Delaunay P, Bouthillier X, Breuleux O, Ortiz-Gagné S, Bilaniuk O, Normandin F, Bergeron A, Carrez B, Alain G, Blanc S, Osterrath F, \textcolor{highlight}{Viviano JD}, et al. Introducing Milabench: Benchmarking Accelerators for AI. arXiv, 2024.}
 
 \paper{Cohen JP, \textcolor{highlight}{Viviano JD}, Bertin P, Morrison P, Torabian P, Guarrera M, Lungren MP, Chaudhari A, Brooks R, Hashir M, Bertrand H. TorchXRayVision: A library of chest X-ray datasets and models. Medical Imaging with Deep Learning (MIDL), 2022.}
 
@@ -384,40 +416,40 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \sectionheading{COMMUNITY SERVICE}
 
-\entry
-{2023-now}
+\entrytext
+{2023--Now}
 {Area Chair}
-{Meta Reviewing}
+{Meta Reviewing.}
 {Paper Adjudication for \link{https://neurips.cc/virtual/2023}{NeurIPS Datasets and Benchmarks Track}.}
 
-\entry
+\entrytext
 {2023}
 {Grant Reviewing}
-{Health Data Nexus Dataset Grants}
+{Health Data Nexus Dataset Grants.}
 {Reviewed 5 Proposals on the Collection of Healthcare-focused ML-ready datasets.}
 
-\entry
-{2014-now}
+\entrytext
+{2014--Now}
 {Reviewing}
-{Paper Reviews for Conferences and Journals}
-{Reviews for \link{https://iclr.cc/}{ICLR}, \link{https://icml.cc/}{ICML Position Paper Track} (2026 Gold Reviewer Award), \link{http://preregister.science/}{NeurIPS Pre-registration in ML Workshop}, \link{https://fpineurips.framer.website/}{FPI NeurIPS}, \link{https://www.biologicalpsychiatryjournal.com/}{Biological Psychiatry}, \link{https://www.midl.io/}{MIDL}, \link{https://www.pnas.org/}{PNAS}, \& \link{https://journals.plos.org/plosone/}{PLOS ONE}.}
+{Paper reviews for conferences and journals.}
+{Reviews for \link{https://iclr.cc/}{ICLR}, \link{https://icml.cc/}{ICML Position Paper Track}, \link{http://preregister.science/}{NeurIPS Pre-registration in ML Workshop}, \link{https://fpineurips.framer.website/}{FPI NeurIPS}, \link{https://www.biologicalpsychiatryjournal.com/}{Biological Psychiatry}, \link{https://www.midl.io/}{MIDL}, \link{https://www.pnas.org/}{PNAS}, \& \link{https://journals.plos.org/plosone/}{PLOS ONE}.}
 
-\entry
+\entrytext
 {2026}
 {Instruction}
-{Introduction to Agentic Engineering and Research}
+{Introduction to Agentic Engineering and Research.}
 {A 3-hour workshop on how to use Claude Code geared towards Undergraduate and Master's level students for \link{https://www.techaidemontreal.org/en/}{Techaide}}
 
-\entry
+\entrytext
 {2019}
 {Instruction}
-{Deep Learning for Neuroscientists}
+{Deep Learning for Neuroscientists.}
 {A 1.5-3 hour course on the fundamentals of deep learning for a non-CS audience given at \link{http://www.crm.umontreal.ca/2019/MAIN2019/index_e.php}{MAIN 2019} and \link{https://brainhackmtl.github.io/global2019/}{Brainhack 2019}.}
 
-\entry
+\entrytext
 {2015--2016}
 {Instructor}
-{Python for MRI Data Analysis}
+{Python for MRI Data Analysis.}
 {Designed and taught course on MRI data analysis using Numpy.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -474,43 +506,43 @@ DeSimone K, \textcolor{highlight}{Viviano J}, Schneider KA. 2013. Population rec
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \sectionheading{TEACHING ENGAGEMENTS}
 
-\entry
+\entrytext
 {2014}
 {Tutorial Leader}
 {Genetics, BIOL 2040}
 {Taught intro-level genetics and marked assignments.}
 
-\entry
+\entrytext
 {2013}
 {Mark Compiler}
 {Introduction to Biology, BIOL 1000}
 {Automated this position using Python.}
 
-\entry
+\entrytext
 {2012--2013}
 {Tutorial Leader}
 {Mind and Brain, NATS 1860}
 {Led discussions about cognitive science, psychology, and neuroscience with non-science majors.}
 
-\entry
+\entrytext
 {2012--2014}
 {Tutorial Leader}
 {Biology of Sex, NATS 1660}
 {Taught basic genetics and cell biology to non-science majors.}
 
-\entry
+\entrytext
 {2011--2012}
 {Tutorial Leader}
 {The Living Body, NATS 1610}
 {Taught basic physiology to non-science majors.}
 
-\entry
+\entrytext
 {2011}
 {Tutorial Leader}
 {Introduction to Biology, BIOL 1000}
 {Taught intro-level biology, led labs, and marked full-length reports.}
 
-\entry
+\entrytext
 {2011}
 {Tutorial Leader}
 {Statistics for Biologists, BIOL 2060}
@@ -519,10 +551,10 @@ DeSimone K, \textcolor{highlight}{Viviano J}, Schneider KA. 2013. Population rec
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \sectionheading{CERTIFICATION}
 
-\entry
+\entrytext
 {2016}
 {Certified System Administrator}
-{Linux Foundation}
+{Linux Foundation.}
 {Understanding of basic Linux environment, including system signals, networking, user access, automation, virtualisation, \& maintenance.}
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
